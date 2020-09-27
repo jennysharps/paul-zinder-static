@@ -1,8 +1,8 @@
 <div id="navigation">
     <div class="col-full">
       <h1 id="logo" class="fl">
-        <a href="{{ '/' | absolute_url }}">
-          <img src="{{ '/assets/images/logo.png' | absolute_url }}" alt="{{ page.title }}">
+        <a href="{{ absolute_url }}">
+          <img src="{{ 'assets/images/logo.png' | absolute_url }}" alt="{{ page.title }}">
         </a>
       </h1><!-- /#logo -->
 
@@ -11,10 +11,10 @@
           <!-- current-menu-item current_page_item -->
           <ul id="menu-main-menu" class="menu">
             <li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-616">
-              <a href="{{ '/', absolute_url }}">Home</a>
+              <a href="{{ absolute_url }}">Home</a>
             </li>
             <li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-19 menu-item-617">
-              <a href="{{ '/about' | absolute_url }}" aria-current="page">About</a>
+              <a href="{{ 'about' | absolute_url }}" aria-current="page">About</a>
             </li>
             <li id="menu-item-618" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-618">
               <a href="{{ 'films' | absolute_url }}">Films</a>
