@@ -30,11 +30,8 @@
             </div>
           
             <div id="bottomsearch" class="fr">
-                <form method="get" id="searchform_bottom" action="{{ absolute_url }}">
-                    <input type="text" class="field" name="s" value="Enter search term..." onfocus="if (this.value == 'Enter search term...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter search term...';}" />
-                    <input type="submit" class="submit" name="submit" value="Search" />
-                </form>
-              </div><!-- /#topsearch -->
+              {% include search-input.html %}
+            </div><!-- /#bottom search -->
           </div><!-- /.col-full -->
         </div><!-- #footer -->
       </div><!-- .content_wrapper -->
