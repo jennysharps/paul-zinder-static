@@ -5,7 +5,7 @@ layout: default
     <h1>{{ page.name }}</h1>
     
     <h1 class='alternate-title'>
-        {% if page.alternate_name != '' %}
+        {% if page.alternate_name %}
         <span>({{ page.alternate_name }}),</span>
         {% endif %}
         {{ page.year }}
@@ -13,7 +13,7 @@ layout: default
 
     <div class='video-details-container'>
         <div class='left-video-details'>
-            {% if page.image != '' %}
+            {% if page.image %}
             <span class="fl padding-right">
                 <a rel="gallery-img" href="{{ page.image | absolute_url }}">
                     <img width="280" height="210" alt="{{ page.name }} main image" src="{{ page.image | absolute_url }}" title='"{{ page.name }}"' />
@@ -21,7 +21,7 @@ layout: default
             </span>
             {% endif %}
                  
-            {% if page.vimeo_id != '' %}
+            {% if page.vimeo_id %}
             <div class='tagline-col'>
                 <a class="video watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.name }}']);">
                     <h2>Watch Film</h2>
@@ -29,7 +29,7 @@ layout: default
             </div>
             {% endif %}
 
-            {% if page.synopsis != '' %}
+            {% if page.synopsis %}
             <div class='clear'></div>
 
             <span id='synopsis'>
@@ -62,7 +62,7 @@ layout: default
             {% for screening in page.selected_screenings %}
             <p>
                 <span class="screening-name">{{ screening.name }}</span>
-                {% if screening.location != '' %}
+                {% if screening.location %}
                     ({{ screening.location }})
                 {% endif %}
                 {{ screening.year }}
