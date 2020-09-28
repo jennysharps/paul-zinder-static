@@ -138,7 +138,7 @@ selected_screenings:
     - name: Lone Star International Film Festival
       location: Texas
       year: 2008
-    - name: Los Angeles Film Festival –
+    - name: Los Angeles Film Festival
       year: 2008
     - name: Newport Beach Film Festival
       location: California

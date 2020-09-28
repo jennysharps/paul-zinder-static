@@ -15,15 +15,15 @@ layout: default
         <div class='left-video-details'>
             {% if page.image %}
             <span class="fl padding-right">
-                <a rel="gallery-img" href="{{ page.image.name | append: '-280x210.' | append: page.image.extension | absolute_url }}">
-                    <img width="280" height="210" alt="{{ page.name }} main image" src="{{ page.image.name | append: '.' | append: page.image.extension | absolute_url }}" title='"{{ page.name }}"' />
+                <a rel="gallery-img" href="{{ page.image.name | append: '.' | append: page.image.extension | absolute_url }}">
+                    <img width="280" height="210" alt="{{ page.title }} main image" src="{{ page.image.name | append: '-280x210.' | append: page.image.extension | absolute_url }}" title='"{{ page.title }}"' />
                 </a>
             </span>
             {% endif %}
                  
             {% if page.vimeo_id %}
             <div class='tagline-col'>
-                <a class="video watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.name }}']);">
+                <a class="video watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.title }}']);">
                     <h2>Watch Film</h2>
                 </a>
             </div>
@@ -64,6 +64,8 @@ layout: default
                 <span class="screening-name">{{ screening.name }}</span>
                 {% if screening.location %}
                     ({{ screening.location }})
+                {% else %}
+                    –
                 {% endif %}
                 {{ screening.year }}
             </p>
