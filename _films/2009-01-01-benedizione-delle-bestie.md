@@ -1,7 +1,7 @@
 ---
 title: Benediction of the Beasts
 layout: film
-alternate_name: Benedizione delle Bestie
+alternate_title: Benedizione delle Bestie
 year: 2009
 image:
   name: 'assets/images/2011/06/Picture-1'

@@ -1,7 +1,7 @@
 ---
 title: One of the Last
 layout: film
-alternate_name: Uno degli Ultimi
+alternate_title: Uno degli Ultimi
 image:
   name: 'assets/images/2011/06/uno_degli_ultimi_2'
   extension: jpg
