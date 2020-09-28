@@ -1,101 +1,37 @@
+---
+layout: default
+---
+<div id="main" class="fullwidth home">
+    <div id='slider'>
+        <ul class='slides'>               
+            <li class='first'>
+                <div class='overlay'>
+                <a href="{{ 'films/uno-degli-ultimi' | absolute_url }}'" alt='Link to One of the Last' title='One of the Last'>
+                    <img class='slide' src="{{ 'assets/images/2011/06/unodegliultimi.jpg'| absolute_url }}" alt='Featured Video' title='One of the Last'/>
+                </a>
+                </div>
+            </li>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head profile="http://gmpg.org/xfn/11">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css' | absolute_url }}" media="screen" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      
-    <meta name="description"  content="Paul Zinder: award-winning filmmaker whose work has screened internationally, a published writer in cult television studies, and a university lecturer in film production for almost twenty years." />
-    <script type='text/javascript' src="{{ 'assets/fonts/League_Gothic.font.js' | absolute_url }}"></script>
-    <script type='text/javascript' src="{{ 'assets/fonts/ChunkFive.font.js' | absolute_url }}"></script>
-    
-    <script type='text/javascript' src="{{ 'assets/js/jquery-1.12.4.min.js'| absolute_url }}"></script>
-    <script type='text/javascript' src="{{ 'assets/js/cycle.js'| absolute_url }}"></script>
-  </head>
+            <li>
+                <div class='overlay'>
+                <a href="{{ 'films/robot-and-pinocchi/' | absolute_url }}" alt='Link to Robots and Pinocchios' title='Robots and Pinocchios'>
+                    <img class='slide' src="{{ 'assets/images/2011/06/robot-banner1.jpg'| absolute_url }}" alt='Featured Video' title='Robots and Pinocchios'/>
+                </a>
+                </div>
+            </li>
 
-  <body class="page-template-default page page-id-19 chrome">
-    <div id="container">
-      {%include navigation.html %}
+            <li>
+                <div class='overlay'>
+                <a href="{{ 'films/benedizione-delle-bestie/' | absolute_url }}" alt='Link to Benediction of the Beasts' title='Benediction of the Beasts'>
+                    <img class='slide' src="{{ 'assets/images/2011/06/benedizione-banner.jpg' | absolute_url }}" alt='Featured Video' title='Benediction of the Beasts'/>
+                </a>
+                </div>
+            </li>
+        </ul><!--.slides-->
 
-      <div id='content_wrapper'>
-        <div id="content" class="col-full">
-            <div id="main" class="fullwidth home">
-                <div id='slider'>
-                    <ul class='slides'>               
-                        <li class='first'>
-                            <div class='overlay'>
-                            <a href="{{ 'films/uno-degli-ultimi' | absolute_url }}'" alt='Link to One of the Last' title='One of the Last'>
-                                <img class='slide' src="{{ 'assets/images/2011/06/unodegliultimi.jpg'| absolute_url }}" alt='Featured Video' title='One of the Last'/>
-                            </a>
-                            </div>
-                        </li>                    	
-                        <li>
-                            <div class='overlay'>
-                            <a href="{{ 'films/robot-and-pinocchi/' | absolute_url }}" alt='Link to Robots and Pinocchios' title='Robots and Pinocchios'>
-                                <img class='slide' src="{{ 'assets/images/2011/06/robot-banner1.jpg'| absolute_url }}" alt='Featured Video' title='Robots and Pinocchios'/>
-                            </a>
-                            </div>
-                        </li>                    	
-                        <li>
-                            <div class='overlay'>
-                            <a href="{{ 'films/benedizione-delle-bestie/' | absolute_url }}" alt='Link to Benediction of the Beasts' title='Benediction of the Beasts'>
-                                <img class='slide' src="{{ 'assets/images/2011/06/benedizione-banner.jpg' | absolute_url }}" alt='Featured Video' title='Benediction of the Beasts'/>
-                            </a>
-                            </div>
-                        </li>
-                    </ul><!--.slides-->
-
-                    <div class="slide-nav-wrap">
-                        <a class="next-prev-slide-button prev-slide" href="#">&nbsp;</a>
-                        <a class="next-prev-slide-button next-slide" href="#">&nbsp;</a>
-                    </div>
-                </div><!--slider-->
-            </div><!-- /#main -->
-      </div><!-- /#content -->
-          
-      <div id="footer">
-        <div class="col-full">
-          <div id="copyright" class="col-left">
-            <p>&copy; 2020 Paul Zinder. All Rights Reserved.</p>        
-          </div>
-          
-          <div id="bottomsearch" class="fr">
-              <form method="get" id="searchform_bottom" action="{{ '' | absolute_url }}">
-                  <input type="text" class="field" name="s" value="Enter search term..." onfocus="if (this.value == 'Enter search term...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter search term...';}" />
-                  <input type="submit" class="submit" name="submit" value="Search" />
-              </form>
-            </div><!-- /#topsearch -->
-        </div><!-- /.col-full -->
-      </div><!-- /#footer -->
-    </div><!-- /#container -->
-
-    <script type='text/javascript'>
-        jQuery(function($) {
-             
-            $('#slider .slides').cycle({
-                speed:   3000, 
-                timeout: 0,
-                delay: -1500,
-                pause: 1,
-                next: '#slider .next-slide', 
-                prev: '#slider .prev-slide',
-            });					
-        });
-    </script>
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ site.ga_account_id }}']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </body>
-</html>
+        <div class="slide-nav-wrap">
+            <a class="next-prev-slide-button prev-slide" href="#">&nbsp;</a>
+            <a class="next-prev-slide-button next-slide" href="#">&nbsp;</a>
+        </div>
+    </div><!--slider-->
+</div><!-- /#main -->

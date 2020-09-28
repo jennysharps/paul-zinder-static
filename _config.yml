@@ -54,6 +54,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 ga_account_id: UA-23346786-4
+collections:
+  films:
+    output: true
+    permalink: /:collection/:name
 kramdown:
  input: GFM
  auto_ids: true

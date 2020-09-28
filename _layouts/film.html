@@ -1,4 +1,116 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="post">                
+    <h1>{{ page.name }}</h1>
+    
+    <h1 class='alternate-title'>
+        {% if page.alternate_name != '' %}
+        <span>({{ page.alternate_name }}),</span>
+        {% endif %}
+        {{ page.year }}
+    </h1>
+
+    <div class='video-details-container'>
+        <div class='left-video-details'>
+            {% if page.image != '' %}
+            <span class="fl padding-right">
+                <a rel="gallery-img" href="{{ page.image | absolute_url }}">
+                    <img width="280" height="210" alt="{{ page.name }} main image" src="{{ page.image | absolute_url }}" title='"{{ page.name }}"' />
+                </a>
+            </span>
+            {% endif %}
+                 
+            {% if page.vimeo_id != '' %}
+            <div class='tagline-col'>
+                <a class="video watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.name }}']);">
+                    <h2>Watch Film</h2>
+                </a>
+            </div>
+            {% endif %}
+
+            {% if page.synopsis != '' %}
+            <div class='clear'></div>
+
+            <span id='synopsis'>
+                <p>{{ page.synopsis }}</p>
+            </span>
+            {% endif %}
+        </div><!-- close left-video-details -->
+        
+        {% if page.details.size > 0 %}
+        <div id='right-video-details'>
+            <ul>
+                {% for detail in page.details %}
+                <li>
+                    <span class='heading'>{{ detail.heading }}</span>
+                    <span class='text'>{{ detail.text }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div><!--close right-video-details-->
+        {% endif %}
+    </div><!-- close video-details-container -->
+    
+    <div class='clear'></div>
+
+    <div class='video-awards-container'>
+        {% if page.selected_screenings.size > 0 %}
+        <div id='screenings' class='fl'>
+            <h2 class='heading'>Festivals & Selected Screenings</h2>
+
+            {% for screening in page.selected_screenings %}
+            <p>
+                <span class="screening-name">{{ screening.name }}</span>
+                {% if screening.location != '' %}
+                    ({{ screening.location }})
+                {% endif %}
+                {{ screening.year }}
+            </p>
+            {% endfor %}
+        </div>
+        {% endif %}        
+
+        {% if page.awards.size > 0 %}
+        <div id='awards' class='fl both'>
+            <h2 class='heading'>Awards</h2>
+            {% for award in page.awards %}
+                <p>
+                    <span class="award_name">{{ award.name }},</span> {{ award.year }}
+                </p>
+            {% endfor %}   
+        </div>
+        {% endif %}
+    </div><!-- close video-awards-container -->
+    
+    {% if page.gallery_images.size > 0 %}
+    <div class='clear'></div>
+                        
+    <div class='video-images-container'>
+        <h2 class='heading'>Production Stills</h2>
+
+        {% for image in page.gallery_images %}
+        <span id='img-container' style='width: 176px; height: 133px;'>
+            <span class='img-block' style='width: 176px; height: 133px;'>&nbsp;</span>
+            <a rel='gallery-img' href="{{ image.name | append: '.' | append: image.extension | absolute_url }}">
+                <img class='gallery-img' alt='' width='176' height='133' src="{{ image.name | append: '-176x133.' | append: image.extension | absolute_url }}" />
+            </a>
+        </span>
+        {% endfor %} 
+    </div><!-- close video-images-container -->
+    {% endif %}
+
+    <div class="fl no-underline">
+        <a href="{{ 'benedizione-delle-bestie' | absolute_url }}" rel="next">
+            &laquo; Previous: <span class="italic">Benediction of the Beasts</span>
+        </a>
+    </div>
+    
+    <div class="fr no-underline">
+        <a href="{{ 'prince-albert-hurts' | absolute_url }}" rel="prev">
+            Next: <span class="italic">Prince Albert Hurts</span> &raquo;
+        </a>
+    </div>
+
+    <div class="clear">&nbsp;</div>
+</div><!-- /.post -->
