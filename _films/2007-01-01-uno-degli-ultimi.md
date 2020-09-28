@@ -179,7 +179,7 @@ awards:
       year: 2008
 gallery_images:
     - name: 'assets/images/2011/06/uno_degli_ultimi_0'
-      extension: 'jpg'
+      extension: jpg
     - name: 'assets/images/2011/06/ONE-OF-THE-LAST-Uno-degli-Ultimi-by-Paul-Zinder-poster'
-      extension: 'png'
+      extension: png
 ---

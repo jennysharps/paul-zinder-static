@@ -1,11 +1,9 @@
 ---
 title: In My Own Right
 layout: film
-alternate_name: Uno degli Ultimi
 image:
   name: 'assets/images/2020/01/in-my-own-right-03'
   extension: png
-vimeo_id: 153887531
 synopsis: Jenny Silverston, the first female chairperson of a 176-year-old Orthodox Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail Fisher, to save a religious community formerly dependent on men to survive.
 year: 2019
 details:
@@ -29,8 +27,6 @@ selected_screenings:
     location: Early Cut screened - Krakow, Poland
     year: 2018
 awards:
-  - name: Festival Corto e Mangiato – First Prize (Primo Classificato)
-    year: 2011
   - name: 'Finalist: Peter C. Rollins Award for Best Documentary – National Popular Culture Association Conference (Washington, D.C.)'
     year: 2019
 gallery_images:
