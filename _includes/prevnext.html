@@ -1,0 +1,15 @@
+{% if page.next %}
+<div class="fl no-underline">
+    <a href="{{ page.next.url | absolute_url }}" rel="prev">
+        &laquo; Previous: <span class="italic">{{ page.next.title }}</span>
+    </a>
+</div>
+{% endif %}
+
+{% if page.previous %}
+<div class="fr no-underline">
+    <a href="{{ page.previous.url | absolute_url }}" rel="next">
+        Next: <span class="italic">{{ page.previous.title }}</span> &raquo;
+    </a>
+</div>
+{% endif %}

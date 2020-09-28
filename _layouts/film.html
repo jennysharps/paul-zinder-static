@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">                
-    <h1>{{ page.name }}</h1>
+    <h1>{{ page.title }}</h1>
     
     <h1 class='alternate-title'>
         {% if page.alternate_name %}
@@ -15,8 +15,8 @@ layout: default
         <div class='left-video-details'>
             {% if page.image %}
             <span class="fl padding-right">
-                <a rel="gallery-img" href="{{ page.image | absolute_url }}">
-                    <img width="280" height="210" alt="{{ page.name }} main image" src="{{ page.image | absolute_url }}" title='"{{ page.name }}"' />
+                <a rel="gallery-img" href="{{ page.image.name | append: '-280x210.' | append: page.image.extension | absolute_url }}">
+                    <img width="280" height="210" alt="{{ page.name }} main image" src="{{ page.image.name | append: '.' | append: page.image.extension | absolute_url }}" title='"{{ page.name }}"' />
                 </a>
             </span>
             {% endif %}
@@ -100,17 +100,7 @@ layout: default
     </div><!-- close video-images-container -->
     {% endif %}
 
-    <div class="fl no-underline">
-        <a href="{{ 'benedizione-delle-bestie' | absolute_url }}" rel="next">
-            &laquo; Previous: <span class="italic">Benediction of the Beasts</span>
-        </a>
-    </div>
-    
-    <div class="fr no-underline">
-        <a href="{{ 'prince-albert-hurts' | absolute_url }}" rel="prev">
-            Next: <span class="italic">Prince Albert Hurts</span> &raquo;
-        </a>
-    </div>
+    {% include prevnext.html %}
 
     <div class="clear">&nbsp;</div>
 </div><!-- /.post -->

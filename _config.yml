@@ -57,7 +57,7 @@ ga_account_id: UA-23346786-4
 collections:
   films:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:title
 kramdown:
  input: GFM
  auto_ids: true
