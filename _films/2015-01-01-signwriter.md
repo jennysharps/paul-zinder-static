@@ -7,17 +7,14 @@ image:
 vimeo_id: 134313805
 synopsis: This short, commissioned by the UK’s Canal and River Trust, is a portrait of Graham Brown, a painter of canal boats on Gloucester’s docks. For sixty years, Graham’s work has been his art.
 year: 2015
-details:
-  - heading: Roles
-    text: Director, Producer
-  - heading: Genre
-    text: Documentary
-  - heading: Exhibition Formats
-    text: Digital
-  - heading: Length
-    text: 5 min.
-  - heading: Language
-    text: English
+roles:
+  - Director
+  - Producer
+genre: Documentary
+formats:
+  - Digital
+length: 5 min.
+language: English
 selected_screenings:
   - name: Black Maria Film Festival and The National Gallery of Art
     location: international tour

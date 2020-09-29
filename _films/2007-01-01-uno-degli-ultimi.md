@@ -8,17 +8,18 @@ image:
 vimeo_id: 153887531
 synopsis: Mauro is a 78-year-old Italian farmer who loves his life.  He picks olives, grapes, cherries.  He wonders why anybody would want to do anything else.
 year: 2007
-details:
-    - heading: Roles
-      text: Director, Producer, DoP
-    - heading: Genre
-      text: Documentary
-    - heading: Exhibition Formats
-      text: Digital, DigiBeta, Beta-SP, DVD
-    - heading: Length
-      text: 12 min.
-    - heading: Language
-      text: Italian with English subtitles
+roles:
+  - Director
+  - Producer
+  - DoP
+genre: Documentary
+formats:
+  - Digital
+  - DigiBeta
+  - Beta-SP
+  - DVD
+length: 12 min.
+language: Italian with English subtitles
 selected_screenings:
     - name: Festival Corto e Mangiato - 10th Anniversary
       location: Fano, Italy

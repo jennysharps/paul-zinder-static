@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="row">
+    <div class="film-list items">
+        {% assign films = site.films | reverse %}
+        {% for film in films %}
+        <div class="item-container">
+            <a class="item" href="{{ film.url | absolute_url }}" title="{{ film.title }}">
+                <span class="bg-img">
+                    <img src="{{ film.image.name | append: '-280x210.' | append: film.image.extension | absolute_url }}" alt='{{ film.title }}'  width='280' height='210' />
+                
+                    <span class="post-title">
+                        <h3>{{ film.title }}<br /><span></span></h3>
+                        <span class="excerpt">
+                            {{ film.year }}, {{ film.genre }}
+                        </span>
+                    </span>
+                </span>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div style="clear: both; height: 1px;">&nbsp;</div>
+                
+    <div class="fr">
+        <a style="font-size: 16px; text-decoration: none;" href="{{ 'older-films' | absolute_url }}" alt="Link to older films page" title="Older Films">Older Films &raquo;</a>
+    </div>
+</div><!--/row -->

@@ -1328,9 +1328,11 @@ h2.heading {
   padding-bottom: 10px;
 }
 
-#img-container {
+.img-container {
   display: inline-block;
   margin: 10px 32px 10px 0;
+  width: 176px;
+  height: 133px;
 }
 
 .gallery-img {
@@ -1360,7 +1362,7 @@ h2.heading {
   margin-left: 8px;
 }
 
-h1.alternate-title {
+.alternate-title {
   color: #898989;
   font-weight: 400;
   font-size: 21px;

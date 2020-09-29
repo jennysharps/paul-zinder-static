@@ -6,17 +6,13 @@ image:
   extension: png
 synopsis: Jenny Silverston, the first female chairperson of a 176-year-old Orthodox Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail Fisher, to save a religious community formerly dependent on men to survive.
 year: 2019
-details:
-  - heading: Roles
-    text: Director
-  - heading: Genre
-    text: Documentary
-  - heading: Exhibition Formats
-    text: Digital
-  - heading: Length
-    text: 12 min.
-  - heading: Language
-    text: English
+roles:
+  - Director
+genre: Documentary
+formats:
+  - Digital
+length: 12 min.
+language: English
 selected_screenings:
   - name: Miami Independent Film Festival
     year: 2019

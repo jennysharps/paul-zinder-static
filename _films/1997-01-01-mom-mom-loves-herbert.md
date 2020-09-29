@@ -6,17 +6,19 @@ image:
   extension: jpg
 synopsis: Herb and Marg may be teenagers in love, but he’s Jewish and she’s Catholic, and their mothers are not happy about the impending marriage. Filmmaker Paul Zinder explores his parents’ mixed marriage by utilizing mixed documentary techniques, all in an effort to discover the keys to a happy union.
 year: 1997
-details:
-  - heading: Roles
-    text: Director, Writer, Producer, DoP, Editor
-  - heading: Genre
-    text: Experimental Documentary
-  - heading: Exhibition Formats
-    text: 16mm, DigiBeta, DVD
-  - heading: Length
-    text: 71 min.
-  - heading: Language
-    text: English
+roles:
+  - Director
+  - Writer
+  - Producer
+  - DoP
+  - Editor
+genre: Experimental Documentary
+formats:
+  - 16mm
+  - DigiBeta
+  - DVD
+length: 71 min.
+language: English
 selected_screenings:
   - name: John’s Hopkins Office of Cultural Affairs – Multimedia Discussions
     location: Baltimore, MD

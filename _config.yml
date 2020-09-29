@@ -58,6 +58,8 @@ collections:
   films:
     output: true
     permalink: /:collection/:title
+  older_films:
+    output: false
 kramdown:
  input: GFM
  auto_ids: true

@@ -2,23 +2,23 @@
 title: Benediction of the Beasts
 layout: film
 alternate_title: Benedizione delle Bestie
-year: 2009
 image:
   name: 'assets/images/2011/06/Picture-1'
   extension: jpg
 vimeo_id: 153887941
 synopsis: Each January, on the steps of a 5th century church in Rome’s most derelict neighborhood, man and beast participate in an ancient rite.
-details:
-  - heading: Roles
-    text: Director, DoP
-  - heading: Genre
-    text: Documentary
-  - heading: Exhibition Formats
-    text: Digital, DigiBeta, Beta-SP, DVD
-  - heading: Length
-    text: 9 min.
-  - heading: Language
-    text: Italian and English with English subtitles
+year: 2009
+roles:
+  - Director
+  - DoP
+genre: Documentary
+formats:
+  - Digital
+  - DigiBeta
+  - Beta-SP
+  - DVD
+length: 9 min.
+language: Italian and English with English subtitles
 selected_screenings:
   - name: Reel to Real International Film Festival for Youth
     location: British Columbia, Canada

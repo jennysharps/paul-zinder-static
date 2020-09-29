@@ -6,17 +6,18 @@ image:
   extension: jpg
 synopsis: Joe chooses the infamous “Prince Albert” genital piercing as his first foray into body modification. Melissa has never performed a Prince Albert on a client, but is game for anything. The Prince Albert usually takes approximately 50 seconds to complete. Joe and Melissa’s first shot becomes an 11 minutes-plus odyssey, brimming with patience, pain, humor, hope, and triumph.
 year: 2001
-details:
-  - heading: Roles
-    text: Director, Producer, DoP, Editor
-  - heading: Genre
-    text: Documentary
-  - heading: Exhibition Formats
-    text: Digital, Beta-SP, DVD
-  - heading: Length
-    text: 11 min.
-  - heading: Language
-    text: English
+roles:
+  - Director
+  - Producer
+  - DoP
+  - Editor
+genre: Documentary
+formats:
+  - Digital
+  - Beta-SP
+  - DVD
+length: 11 min.
+language: English
 selected_screenings:
   - name: University of Gloucestershire School of Media - Cineworld Screening Fundraiser
     location: UK

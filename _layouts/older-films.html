@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="post">
+    <h1>{{ page.title }}</h1>
+    
+    {% assign films = site.older_films | reverse %}
+    {% assign awards = "" | split: ',' %}
+    {% for film in films %}
+        {% for award in film.awards %}
+            {% if award.year %}
+                {% assign awards = awards | push: award %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% assign awards = awards | sort: "year" | reverse %}
+    {% if awards.size %}
+    <div class='older-video-awards'>
+        <h1 class="alternate-title" style="padding-top: 10px; top: 0;">
+            Awards
+        </h1>
+        
+        {% for award in awards %}
+        <p>
+            {{ award.year }}: {{ award.name }}
+        </p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% for film in films %}
+    <div class='older-video-details-container'>
+        <h2 class='alternate-title' style='top: 0;'><em>{{ film.title }}</em> ({{ film.year }})</h2>   
+
+        <span class='synopsis'>
+            <p>{{ film.description }}</p>
+        </span>	
+
+        <p>
+            {% if page.roles and page.roles.size %}Roles: {{ page.roles | join: ',' }}{% endif %}
+            <br />
+            {% if page.genre %}Genre: {{ page.genre }}{% endif %}
+            <br />
+            {% if page.formats and page.formats.size %}Formats: {{ page.formats | join: ',' }}{% endif %}
+            <br />
+            {% if page.length %}Length: {{ page.length }} {% endif %}
+            <br />
+        </p>
+
+        <div class="clear"></div>
+    </div>
+    {% endfor %} 
+        
+    <div style="clear: both; height: 1px;">&nbsp;</div>
+
+    <div class="no-underline">
+        <a href="{{ 'films' | absolute_url }}" alt="Link to main films page" title="Main Films Page">
+            &laquo; Main Films Page
+        </a>
+    </div>
+</div>
+    

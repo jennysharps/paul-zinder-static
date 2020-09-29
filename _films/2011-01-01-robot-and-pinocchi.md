@@ -8,17 +8,17 @@ image:
 vimeo_id: 153889437
 synopsis: Italian sculptor Ferdinando Codognotto shapes wood into his personal philosophy. We are all robots and pinocchios.
 year: 2011
-details:
-  - heading: Roles
-    text: Director, Producer, DoP
-  - heading: Genre
-    text: Documentary
-  - heading: Exhibition Formats
-    text: Digital, DigiBeta, Beta-SP
-  - heading: Length
-    text: 10 min.
-  - heading: Language
-    text: Italian with English subtitles
+roles:
+  - Director
+  - Producer
+  - DoP
+genre: Documentary
+formats:
+  - Digital
+  - DigiBeta
+  - Beta-SP
+length: 10 min.
+language: Italian with English subtitles
 selected_screenings:
   - name: Black Maria Film and Video Festival
     location: International tour

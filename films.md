@@ -1,4 +1,4 @@
 ---
 title: Films
-layout: collection
+layout: films
 ---
