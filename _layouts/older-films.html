@@ -38,11 +38,11 @@ layout: default
         </span>	
 
         <p>
-            {% if page.roles and page.roles.size %}Roles: {{ page.roles | join: ',' }}{% endif %}
+            {% if page.roles and page.roles.size %}Roles: {{ page.roles | join: ', ' }}{% endif %}
             <br />
             {% if page.genre %}Genre: {{ page.genre }}{% endif %}
             <br />
-            {% if page.formats and page.formats.size %}Formats: {{ page.formats | join: ',' }}{% endif %}
+            {% if page.formats and page.formats.size %}Formats: {{ page.formats | join: ', ' }}{% endif %}
             <br />
             {% if page.length %}Length: {{ page.length }} {% endif %}
             <br />

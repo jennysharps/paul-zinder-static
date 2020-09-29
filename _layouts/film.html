@@ -40,10 +40,10 @@ layout: default
         
         <div id='right-video-details'>
             <ul>
-                {% if page.roles %}
+                {% if page.roles.size %}
                 <li>
                     <span class='heading'>Roles</span>
-                    <span class='text'>{{ page.roles | join: "," }}</span>
+                    <span class='text'>{{ page.roles | join: ", " }}</span>
                 </li>
                 {% endif %}
 
@@ -54,10 +54,10 @@ layout: default
                 </li>
                 {% endif %}
 
-                {% if page.formats %}
+                {% if page.formats.size %}
                 <li>
                     <span class='heading'>Exhibition Formats</span>
-                    <span class='text'>{{ page.formats | join: "," }}</span>
+                    <span class='text'>{{ page.formats | join: ", " }}</span>
                 </li>
                 {% endif %}
 
