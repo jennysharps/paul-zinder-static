@@ -1360,6 +1360,8 @@ h2.heading {
   position: absolute;
   margin-top: 8px;
   margin-left: 8px;
+  width: 176px;
+  height: 133px;
 }
 
 .alternate-title {
