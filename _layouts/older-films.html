@@ -38,13 +38,13 @@ layout: default
         </span>	
 
         <p>
-            {% if page.roles and page.roles.size %}Roles: {{ page.roles | join: ', ' }}{% endif %}
+            {% if film.roles and film.roles.size %}Roles: {{ film.roles | join: ', ' }}{% endif %}
             <br />
-            {% if page.genre %}Genre: {{ page.genre }}{% endif %}
+            {% if film.genre %}Genre: {{ film.genre }}{% endif %}
             <br />
-            {% if page.formats and page.formats.size %}Formats: {{ page.formats | join: ', ' }}{% endif %}
+            {% if film.formats and film.formats.size %}Formats: {{ film.formats | join: ', ' }}{% endif %}
             <br />
-            {% if page.length %}Length: {{ page.length }} {% endif %}
+            {% if film.length %}Length: {{ film.length }} {% endif %}
             <br />
         </p>
 
