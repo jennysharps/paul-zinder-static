@@ -1,6 +1,6 @@
 ---
 title: Porphyria
-description: A narrative adaptation of Robert Browning’s Porphyria’s Lover.
+description: A narrative adaptation of Robert Browning’s <cite>Porphyria’s Lover</cite>.
 year: 1992
 roles:
   - Director

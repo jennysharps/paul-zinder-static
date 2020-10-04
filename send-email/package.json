@@ -1,0 +1,24 @@
+{
+  "name": "send-email",
+  "version": "1.0.0",
+  "description": "A static front-end generator for paulzinder.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennysharps/paul-zinder-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennysharps/paul-zinder-static/issues"
+  },
+  "homepage": "https://github.com/jennysharps/paul-zinder-static#readme",
+  "dependencies": {
+    "@google-cloud/logging-winston": "^4.0.0",
+    "nodemailer": "^6.4.13",
+    "winston": "^3.3.3"
+  }
+}

@@ -1,36 +1,24 @@
-<div id="navigation">
-    <div class="col-full">
-        <h1 id="logo" class="fl">
-        <a href="{{ '/' | absolute_url }}">
-            <img src="{{ 'assets/images/logo.png' | absolute_url }}" alt="{{ page.title }}">
-        </a>
-        </h1><!-- /#logo -->
+<div class="menu-main-menu-container">
+    <ul id="menu-main-menu" class="menu">
+        {% for item in site.data.navigation.items %}
+            {% assign current = false %}
+            {% if page.category == item.url %}
+                {% assign current = true %}
+            {% elsif item.url == "/" %}
+                {% if page.url == "/" %}
+                    {% assign current = true %}
+                {% endif %}
+            {% else %}
+                {% assign page_url = page.url | replace: ".html", "" %}
+                {% assign item_url = "/" | append: item.url %}
+                {% if page_url contains item_url %}
+                    {% assign current = true %}
+                {% endif %}
+            {% endif %}
 
-        <div class="header-right fr">
-            <div class="menu-main-menu-container">
-                <ul id="menu-main-menu" class="menu">
-                    {% for item in site.data.navigation.items %}
-                        {% assign current = false %}
-                        {% if page.category == item.url %}
-                            {% assign current = true %}
-                        {% elsif item.url == "/" %}
-                            {% if page.url == "/" %}
-                                {% assign current = true %}
-                            {% endif %}
-                        {% else %}
-                            {% assign page_url = page.url | replace: ".html", "" %}
-                            {% assign item_url = "/" | append: item.url %}
-                            {% if page_url contains item_url %}
-                                {% assign current = true %}
-                            {% endif %}
-                        {% endif %}
-
-                        <li class="menu-item {% if current %}current-menu-item{% endif %}">
-                            <a href="{{ item.url | absolute_url }}">{{ item.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>	<!-- /.header-right -->
-    </div><!-- /.col-full -->
-</div><!-- #navigation -->
+            <li class="menu-item {% if current %}current-menu-item{% endif %}">
+                <a href="{{ item.url | absolute_url }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

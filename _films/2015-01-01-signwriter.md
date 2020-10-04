@@ -22,7 +22,8 @@ selected_screenings:
   - name: Los Angeles Short Film Festival
     year: 2016
   - name: Walthamstow International Film Festival
-    location: London, UK) 2016
+    location: London, UK
+    year: 2016
   - name: Canada Shorts
     year: 2015
   - name: Croydon International Film Festival

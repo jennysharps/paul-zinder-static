@@ -1,0 +1,81 @@
+---
+layout: page
+---
+<script src="https://www.google.com/recaptcha/api.js?render={{ site.recaptcha_site_key }}"></script>
+<script>
+jQuery(document).ready(function($) {
+    var form = $(".form");
+    form.on("submit", function(e) {
+        e.preventDefault();
+
+        var data = {};
+        var formData = $(this).serialize();
+
+        // Get data from form...
+
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ site.recaptcha_site_key }}', { action: 'submit' }).then(function(token) {
+                formData += "&g-recaptcha-response=" + token;
+                console.log({ formData  });
+
+                // Stop form from submitting normally
+                $.post("{{ page.form_action }}", formData)
+                    .done(function(data) {
+                        console.log("no probs");
+                        // No problem
+                    })
+                    .fail(function (jqXHR, textStatus) {
+                        console.log("fail");
+                        // An error occured (the server responded with an error status, network issue, ...)
+                        // More information about the error can be found in jqXHR and textStatus
+                    })
+                    .always(function () {
+                        console.log("always");
+                        // This method is always executed whether there were an error or not
+                    });
+            });
+        });
+
+        return false;
+    });
+});
+</script>
+
+<div class="form-container form-container-full"
+>
+    <form action="#" method="post" class="form" >
+        <noscript class="form-error-noscript">
+            Please enable JavaScript in your browser to complete this form.
+        </noscript>
+      
+        <div class="form-fields-container">
+        {% for field in page.form_fields %}
+            <div class="form-field-container form-field-{{ field.type }}">
+                {% capture field_id %}{{ field.type }} - {{ field.name }}{% endcapture %}
+                <label class="label {% if field.required %}label-required{% endif %}" for="{{ field_id }}">
+                    {{ field.label }}
+                </label>
+                
+                {% case field.type %}
+                {% when "textarea" %}
+                    <textarea id="{{ field_id }}" class="form-field form-field-medium {% if field.required %}form-field-required{% endif %}" name="{{ field.name }}" {% if field.required %}required{% endif %}></textarea>
+                {% else %}
+                <input id="{{ field_id }}" type="{{ field.type }}" class="form-field form-field-medium {% if field.required %}form-field-required{% endif %}" name="{{ field.name }}" {% if field.required %}required{% endif %}>
+                {% endcase %}
+            </div>
+        {% endfor %}
+        </div>
+
+        <!-- <div class="form-recaptcha-container">
+            <div class="g-recaptcha" data-sitekey="6LeUB3oUAAAAAJChVyyJbm83dIU9mFsUhxVG3C5g"></div>
+
+            <input type="text" name="g-recaptcha-hidden" class="form-recaptcha-hidden" style="position:absolute!important;clip:rect(0,0,0,0)!important;height:1px!important;width:1px!important;border:0!important;overflow:hidden!important;padding:0!important;margin:0!important;" required>
+        </div> -->
+
+        <div class="form-submit-container">            
+            <button type="submit" class="button form-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Send">
+                {{ page.form_submit_text | default: "Submit" }}
+            </button>
+        </div>
+   </form>
+</div>

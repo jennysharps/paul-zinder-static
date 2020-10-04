@@ -54,6 +54,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 ga_account_id: UA-23346786-4
+recaptcha_site_key: 6LclWNMZAAAAAAl1DsZKwb7IlVuK660aCfIg7_LU
 collections:
   films:
     output: true
@@ -65,4 +66,7 @@ kramdown:
  auto_ids: true
  hard_wrap: false
  syntax_highlighter: rouge
-github: [metadata]
+github:
+  - metadata
+exclude:
+  - send-email

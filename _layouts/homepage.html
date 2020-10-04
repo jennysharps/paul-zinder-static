@@ -1,37 +1,23 @@
 ---
 layout: default
 ---
-<div id="main" class="fullwidth home">
-    <div id='slider'>
-        <ul class='slides'>               
-            <li class='first'>
-                <div class='overlay'>
-                <a href="{{ 'films/uno-degli-ultimi' | absolute_url }}'" alt='Link to One of the Last' title='One of the Last'>
-                    <img class='slide' src="{{ 'assets/images/2011/06/unodegliultimi.jpg'| absolute_url }}" alt='Featured Video' title='One of the Last'/>
+<div id='slider'>
+    <ul class='slides sheet'>
+    {% assign i = 0 %}
+    {% for film in page.featured_films %}
+        <li {% if i == 0 %}class="first"{% endif %}>
+            <div class='overlay'>
+                <a href="{{ film.url | absolute_url }}'" alt='Link to {{ film.title }}' title='{{ film.title }}'>
+                    <img class='slide' src="{{ film.image | absolute_url }}" alt='Featured Film' title='{{ film.title }}'/>
                 </a>
-                </div>
-            </li>
+            </div>
+        </li>
+        {% assign i = i | plus:1 %}
+    {% endfor %}
+    </ul>
 
-            <li>
-                <div class='overlay'>
-                <a href="{{ 'films/robot-and-pinocchi/' | absolute_url }}" alt='Link to Robots and Pinocchios' title='Robots and Pinocchios'>
-                    <img class='slide' src="{{ 'assets/images/2011/06/robot-banner1.jpg'| absolute_url }}" alt='Featured Video' title='Robots and Pinocchios'/>
-                </a>
-                </div>
-            </li>
-
-            <li>
-                <div class='overlay'>
-                <a href="{{ 'films/benedizione-delle-bestie/' | absolute_url }}" alt='Link to Benediction of the Beasts' title='Benediction of the Beasts'>
-                    <img class='slide' src="{{ 'assets/images/2011/06/benedizione-banner.jpg' | absolute_url }}" alt='Featured Video' title='Benediction of the Beasts'/>
-                </a>
-                </div>
-            </li>
-        </ul><!--.slides-->
-
-        <div class="slide-nav-wrap">
-            <a class="next-prev-slide-button prev-slide" href="#">&nbsp;</a>
-            <a class="next-prev-slide-button next-slide" href="#">&nbsp;</a>
-        </div>
-    </div><!--slider-->
-</div><!-- /#main -->
+    <div class="slide-nav-wrap">
+        <a class="next-prev-slide-button prev-slide" href="#">&nbsp;</a>
+        <a class="next-prev-slide-button next-slide" href="#">&nbsp;</a>
+    </div>
+</div><!--slider-->

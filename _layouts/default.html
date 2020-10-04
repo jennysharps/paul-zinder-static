@@ -16,34 +16,19 @@
     <script type="text/javascript" src="{{ 'assets/js/jquery.mousewheel-3.1.13.min.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/cycle.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/general.js' | absolute_url }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/cufon.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/fonts/League_Gothic.font.js' | absolute_url }}"></script>
-    <script type="text/javascript" src="{{ 'assets/fonts/Cufon.font.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/fonts/ChunkFive.font.js' | absolute_url }}"></script>
-    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body class="page-template-default page page-id-19 chrome">
-    <div id="container">
-      {% include navigation.html %}
+    {% include header.html %}
 
-      <div id='content_wrapper'>
-        <div id="content" class="col-full">
-          {{ content }}
-        </div>
-        
-        <div id="footer">
-          <div class="col-full">
-            <div id="copyright" class="col-left">
-              <p>&copy; 2020 Paul Zinder. All Rights Reserved.</p>        
-            </div>
-          
-            <div id="bottomsearch" class="fr">
-              {% include search-input.html %}
-            </div><!-- /#bottom search -->
-          </div><!-- /.col-full -->
-        </div><!-- #footer -->
-      </div><!-- .content_wrapper -->
-    </div><!-- .container -->
+    <main class="content-container">
+      {{ content }}
+    </main>
+    
+    {% include footer.html %}
 
     <script type='text/javascript'>
       jQuery(function($) {
