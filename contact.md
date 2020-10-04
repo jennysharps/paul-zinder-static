@@ -1,7 +1,7 @@
 ---
 title: Contact
 layout: form
-form_action: "https://us-central1-paul-zinder.cloudfunctions.net/sendEmail"
+form_action: "https://us-central1-paul-zinder.cloudfunctions.net/send-email"
 form_fields:
     - name: name
       label: Name
