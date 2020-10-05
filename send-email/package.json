@@ -18,7 +18,9 @@
   "homepage": "https://github.com/jennysharps/paul-zinder-static#readme",
   "dependencies": {
     "@google-cloud/logging-winston": "^4.0.0",
+    "@moneytree/mask-pii": "^0.1.0",
     "nodemailer": "^6.4.13",
+    "request": "^2.88.2",
     "winston": "^3.3.3"
   }
 }
