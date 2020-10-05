@@ -1,23 +1,28 @@
 ---
 layout: default
 ---
-<div id='slider'>
-    <ul class='slides sheet'>
-    {% assign i = 0 %}
-    {% for film in page.featured_films %}
-        <li {% if i == 0 %}class="first"{% endif %}>
-            <div class='overlay'>
-                <a href="{{ film.url | absolute_url }}'" alt='Link to {{ film.title }}' title='{{ film.title }}'>
-                    <img class='slide' src="{{ film.image | absolute_url }}" alt='Featured Film' title='{{ film.title }}'/>
-                </a>
-            </div>
-        </li>
-        {% assign i = i | plus:1 %}
-    {% endfor %}
-    </ul>
+<script></script>
+<script type="text/javascript" src="{{ 'assets/js/slick.min.js' | absolute_url }}"></script>
+<script type='text/javascript'>
+    jQuery(document).ready(function($) {
+        $('.carousel').slick({
+            infinite: true,
+            speed: 3000,
+            fade: true,
+            cssEase: 'linear',
+            autoPlay: true,
+            autoPlaySpeed: 1500,
+        });			
+    });
+</script>
 
-    <div class="slide-nav-wrap">
-        <a class="next-prev-slide-button prev-slide" href="#">&nbsp;</a>
-        <a class="next-prev-slide-button next-slide" href="#">&nbsp;</a>
-    </div>
-</div><!--slider-->
+<ul class='carousel'>
+{% for film in page.featured_films %}
+    <li>
+        <a href="{{ film.url | absolute_url }}" alt='Link to {{ film.title }}' title='{{ film.title }}'>
+            <img width="890" height="321" src="{{ film.image | absolute_url }}" alt='Featured Film' title='{{ film.title }}'/>
+        </a>
+    </li>
+{% endfor %}
+</ul>
+

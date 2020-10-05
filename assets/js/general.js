@@ -1,5 +1,5 @@
-jQuery(document).ready(
-    function($) {
+// TODO: Remove & update styles for films page to use flex
+jQuery(document).ready(function($) {
     //expand container to fit all right-foated content
     var container = $(".video-details-container").height(),
     right = ( $("#right-video-details").height()-1 );
@@ -17,12 +17,11 @@ jQuery(document).ready(
             $("#awards").css( "height", awards_container+"px" );
         }
     }	 	
-    });
+});
     
-    jQuery(window).load(
-    function(){
-        jQuery('img.gallery-img').each(function(i) {
-            img = new Image();
-            img.src = jQuery(this).parent().attr('href');
-        });
+jQuery(window).load(function(){
+    jQuery('img.gallery-img').each(function(i) {
+        img = new Image();
+        img.src = jQuery(this).parent().attr('href');
     });
+});

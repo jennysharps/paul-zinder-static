@@ -1,7 +1,9 @@
 <header class="site-header">
-    <a class="site-logo" href="{{ '/' | absolute_url }}">
-        <img src="{{ 'assets/images/logo.png' | absolute_url }}" alt="{{ page.title }}">
-    </a>
-    
-    {% include navigation.html %}
+    <div class="content-container">
+        <a class="site-logo" href="{{ '/' | absolute_url }}">
+            <img src="{{ 'assets/images/logo.png' | absolute_url }}" alt="{{ page.title }}">
+        </a>
+        
+        {% include navigation.html %}
+    </div>
 </header>

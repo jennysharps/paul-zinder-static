@@ -11,7 +11,7 @@ layout: default
                     <img src="{{ film.image.name | append: '-280x210.' | append: film.image.extension | absolute_url }}" alt='{{ film.title }}'  width='280' height='210' />
                 
                     <span class="post-title">
-                        <h3>{{ film.title }}<br /><span></span></h3>
+                        <h3>{{ film.title }}{% if film.alternate_title %}<br /><span>({{ film.alternate_title }})</span>{% endif %}</h3>
                         <span class="excerpt">
                             {{ film.year }}, {{ film.genre }}
                         </span>
