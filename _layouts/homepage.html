@@ -5,14 +5,32 @@ layout: default
 <script type="text/javascript" src="{{ 'assets/js/slick.min.js' | absolute_url }}"></script>
 <script type='text/javascript'>
     jQuery(document).ready(function($) {
-        $('.carousel').slick({
+        var carousel = $('.carousel');
+        var settings = {
             infinite: true,
             speed: 3000,
             fade: true,
             cssEase: 'linear',
             autoPlay: true,
             autoPlaySpeed: 1500,
-        });			
+        };
+        if ($(window).width() > 768) {
+            carousel.slick(settings);
+        }
+
+        // reslick only if it's not slick()
+        $(window).on('resize', function() {
+            if ($(window).width() < 768) {
+                if (carousel.hasClass('slick-initialized')) {
+                    carousel.slick('unslick');
+                }
+                return;
+            }
+
+            if (!carousel.hasClass('slick-initialized')) {
+                return carousel.slick(settings);
+            }
+        });
     });
 </script>
 
