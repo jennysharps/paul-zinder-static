@@ -1,6 +1,7 @@
 ---
 title: Teaching
 layout: page
+permalink: /teaching/
 ---
 
 Paul Zinder received his MFA in Film from the College of Visual and Performing Arts at Syracuse University in 1996.  He has taught film and media production, studies, and screenwriting at Syracuse University, Towson University, the University of Maryland (Baltimore County), New School University (New York City – online), and Temple University (Rome).

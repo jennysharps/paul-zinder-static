@@ -1,6 +1,7 @@
 ---
 title: Contact
 layout: form
+permalink: /contact/
 form_action: "https://us-central1-paul-zinder.cloudfunctions.net/send-email"
 form_fields:
     - name: name

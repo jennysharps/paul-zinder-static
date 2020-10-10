@@ -58,7 +58,7 @@ recaptcha_site_key: 6LclWNMZAAAAAAl1DsZKwb7IlVuK660aCfIg7_LU
 collections:
   films:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:title/
   older_films:
     output: false
 kramdown:
