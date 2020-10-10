@@ -1,39 +1,41 @@
 ---
 layout: page
 ---               
-<h1>{{ page.title }}</h1>
+<h1 class="h1">{{ page.title }}</h1>
 
-<h1 class='alternate-title'>
+<h2 class='alternate-title'>
     {% if page.alternate_title %}
     <span>({{ page.alternate_title }}),</span>
     {% endif %}
     {{ page.year }}
-</h1>
+</h2>
 
 <div class='video-details-container'>
     <div class='left-video-details'>
-        {% if page.image %}
-        <span class="fl padding-right">
-            <a rel="gallery-img" href="{{ page.image.name | append: '.' | append: page.image.extension | absolute_url }}">
-                <img width="280" height="210" alt="{{ page.title }} main image" src="{{ page.image.name | append: '-280x210.' | append: page.image.extension | absolute_url }}" title='"{{ page.title }}"' />
-            </a>
-        </span>
-        {% endif %}
+        <div class="video-detail-item">
+            <div class="video-detail-image">
+                {% if page.image %}
+                    <a rel="gallery-img" href="{{ page.image.name | append: '.' | append: page.image.extension | absolute_url }}">
+                        <img width="280" height="210" alt="{{ page.title }} main image" src="{{ page.image.name | append: '-280x210.' | append: page.image.extension | absolute_url }}" title='"{{ page.title }}"' />
+                    </a>
+                {% endif %}
+            </div>
                 
-        {% if page.vimeo_id %}
-        <div class='tagline-col'>
-            <a class="video button watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.title }}']);">
-                <h2>Watch Film</h2>
-            </a>
+            <div>
+                {% if page.vimeo_id %}
+                    <a class="video button watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.title }}']);">
+                        <h2>Watch Film</h2>
+                    </a>
+                {% endif %}
+            </div>
         </div>
-        {% endif %}
 
         {% if page.synopsis %}
-        <div class='clear'></div>
-
-        <span id='synopsis'>
-            <p>{{ page.synopsis }}</p>
-        </span>
+        <div class="video-detail-item">
+            <span id='synopsis'>
+                <p>{{ page.synopsis }}</p>
+            </span>
+        </div>
         {% endif %}
     </div><!-- close left-video-details -->
     
@@ -77,11 +79,9 @@ layout: page
     </div><!--close right-video-details-->
 </div><!-- close video-details-container -->
 
-<div class='clear'></div>
-
 <div class='video-awards-container'>
     {% if page.selected_screenings.size > 0 %}
-    <div id='screenings' class='fl'>
+    <div id='screenings'>
         <h2 class='heading'>Festivals & Selected Screenings</h2>
 
         {% for screening in page.selected_screenings %}
@@ -99,7 +99,7 @@ layout: page
     {% endif %}        
 
     {% if page.awards.size > 0 %}
-    <div id='awards' class='fl {% if page.selected_screenings.size %}screenings-awards{% endif %}'>
+    <div id='awards' class='{% if page.selected_screenings.size %}screenings-awards{% endif %}'>
         <h2 class='heading'>Awards</h2>
         {% for award in page.awards %}
             <p>
@@ -111,19 +111,18 @@ layout: page
 </div><!-- close video-awards-container -->
 
 {% if page.gallery_images.size > 0 %}
-<div class='clear'></div>
-                    
 <div class='video-images-container'>
     <h2 class='heading'>Production Stills</h2>
 
-    {% for image in page.gallery_images %}
-    <span class='img-container'>
-        <span class='img-block'>&nbsp;</span>
-        <a rel='gallery-img' href="{{ image.name | append: '.' | append: image.extension | absolute_url }}">
-            <img class='gallery-img' alt='' width='176' height='133' src="{{ image.name | append: '-176x133.' | append: image.extension | absolute_url }}" />
-        </a>
-    </span>
-    {% endfor %} 
+    <div class="video-images">
+        {% for image in page.gallery_images %}
+        <div class='img-container'>
+            <a rel='gallery-img' href="{{ image.name | append: '.' | append: image.extension | absolute_url }}">
+                <img class='gallery-img' alt='' width='176' height='133' src="{{ image.name | append: '-176x133.' | append: image.extension | absolute_url }}" />
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 </div><!-- close video-images-container -->
 {% endif %}
 

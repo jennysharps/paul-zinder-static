@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<h1>{{ page.title }}</h1>
+<h1 class="h1">{{ page.title }}</h1>
 
 <div class="older-videos-container">
     {% assign films = site.older_films | reverse %}
@@ -29,15 +29,17 @@ layout: page
     {% endfor %}
     </div>
 
+    {% assign sorted_films = films | nested_sort: 'award.year' %}
     {% assign awards = "" | split: ',' %}
-    {% for film in films %}
+    {% assign award_films = "" | split: ',' %}
+    {% for film in sorted_films %}
         {% for award in film.awards %}
             {% if award.year %}
                 {% assign awards = awards | push: award %}
+                {% assign award_films = award_films | push: film %}
             {% endif %}
         {% endfor %}
     {% endfor %}
-    {% assign awards = awards | sort: "year" | reverse %}
     {% if awards.size %}
     <div class='older-video-awards'>
         <h1 class="alternate-title" style="padding-top: 10px; top: 0;">
@@ -46,7 +48,7 @@ layout: page
         
         {% for award in awards %}
         <p>
-            {{ award.year }}: {{ award.name }}
+            {{ award.year }}: {{ award.name }} (for {{ award_films[forloop.index0].title }})
         </p>
         {% endfor %}
     </div>
