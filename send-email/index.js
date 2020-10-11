@@ -1,7 +1,7 @@
+const axios = require('axios');
 const mask = require("@moneytree/mask-pii");
 const nodemailer = require("nodemailer");
-const request = require('request');
-const log = require("./log");
+const logger = require("./logging");
 
 let transport = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -25,7 +25,7 @@ exports.sendEmail = async (req, res) => {
         "https://jennysharps.github.io",
     ];
     const origin = req.get('origin');
-    log.info(`Origin: ${origin}`);
+    logger.info(`Origin: ${origin}`);
 
     if (allowed_origins.includes(origin)) {
         res.set('Access-Control-Allow-Origin', origin);
@@ -36,13 +36,22 @@ exports.sendEmail = async (req, res) => {
         res.set('Access-Control-Allow-Methods', 'POST');
         res.set('Access-Control-Allow-Headers', 'Content-Type');
         res.set('Access-Control-Max-Age', '3600');
-        res.status(204).send('');
-        return;
+        return res.status(204).send('');
     }
 
-    ["g-recaptcha-response", "email", "name", "message"].forEach(fieldName => {
+    if (req.method !== 'POST') {
+        return res.status(405).send({
+            status: "ERROR",
+            error: {
+                code: "METHOD_NOT_ALLOWED",
+                message: `\`${req.method}\` requests are not supported`
+            }
+        });
+    }
+
+    ["email", "name", "message"].forEach(fieldName => {
         if (!req.body[fieldName]) {
-            res.status(422).send({
+            return res.status(422).send({
                 status: "ERROR",
                 error: {
                     code: "UNPROCESSABLE_ENTITY",
@@ -52,23 +61,32 @@ exports.sendEmail = async (req, res) => {
         }
     });
 
-    const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.RECAPTCHA_SECRET + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-    request(verificationURL, (_error, _response, body) => {
-        body = JSON.parse(body);
+    if (!req.body['g-recaptcha-response']) {
+        return res.status(401).send({
+            status: "ERROR",
+            error: {
+                code: "UNAUTHORIZED",
+                message: "`g-recaptcha-response` is required"
+            }
+        });
+    }
 
-        if(!body.success) {
-            res.status(422).send({
+    try {
+        const captchaVerifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${req.body['g-recaptcha-response']}&remoteip=${req.connection.remoteAddress}`;
+        const { data: { success, ...rest } } = await axios.post(captchaVerifyUrl);
+
+         if(!success) {
+            logger.info("Error codes", JSON.stringify(rest['error-codes']));
+            return res.status(401).send({
                 status: "ERROR",
                 error: {
-                    code: "UNPROCESSABLE_ENTITY",
-                    message: "`g-recaptcha-response` could not be validated"
+                    code: "UNAUTHORIZED",
+                    message: "`g-recaptcha-response` could not be verified"
                 }
             });
         }
-        log.info("Captcha passed validation");
-    });
+        logger.info("Captcha passed verification");
 
-    try {
         const message = {
             from: 'jennylynnsharps@gmail.com',
             to: 'jsharps85@gmail.com',
@@ -78,10 +96,11 @@ exports.sendEmail = async (req, res) => {
         };
 
         await transport.sendMail(message);
-        log.info(`Email sent: replyTo=${mask.email(message.replyTo)}`);
-        res.status(204).send('');
+        logger.info(`Email sent: replyTo=${mask.email(message.replyTo)}`);
+        
+        return res.status(204).send('');
     } catch (err) {
-        log.info("Error sending message:", { err });
-        res.status(500).send({ status: "ERROR", error: { code: "INTERNAL_ERROR", message: "Email could not be sent" }});    
+        logger.error("Error sending message:", { err });
+        return res.status(500).send({ status: "ERROR", error: { code: "INTERNAL_ERROR", message: "Email could not be sent" }});  
     }
 };
