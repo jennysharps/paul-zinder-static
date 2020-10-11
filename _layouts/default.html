@@ -15,6 +15,7 @@
     <script type="text/javascript" src="{{ 'assets/js/jquery-3.4.0.min.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/jquery.fancybox-1.3.24.min.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/jquery.mousewheel-3.1.13.min.js' | absolute_url }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/popper.min.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/cufon.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/fonts/League_Gothic.font.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/fonts/ChunkFive.font.js' | absolute_url }}"></script>
@@ -28,20 +29,5 @@
     </main>
     
     {% include footer.html %}
-    <script type='text/javascript'>
-      var fb_timeout,fb_opts={overlayShow:!0,hideOnOverlayClick:!0,overlayColor:"#000",showCloseButton:!0,margin:20,centerOnScroll:!0,enableEscapeButton:!0,autoScale:!0};if(void 0===easy_fancybox_handler){var easy_fancybox_handler=function(){jQuery('.nofancybox,a.wp-block-file__button,a.pin-it-button,a[href*="pinterest.com/pin/create"],a[href*="facebook.com/share"],a[href*="twitter.com/share"]').addClass("nolightbox");jQuery('a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpg"]:not(.nolightbox),a[href*=".gif"]:not(.nolightbox,li.nolightbox>a),area[href*=".gif"]:not(.nolightbox),a[href*=".png"]:not(.nolightbox,li.nolightbox>a),area[href*=".png"]:not(.nolightbox)').addClass("fancybox image").attr("rel","gallery"),jQuery("a.fancybox,area.fancybox,li.fancybox a").each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{easingIn:"linear",easingOut:"linear",opacity:!1,hideOnContentClick:!1,titleShow:!0,titleFromAlt:!0,showNavArrows:!0,enableKeyboardNav:!0,cyclic:!1}))}),jQuery("a.fancybox-youtube,area.fancybox-youtube,li.fancybox-youtube a").each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{type:"iframe",width:640,height:390,padding:0,keepRatio:1,titleShow:!1,titlePosition:"float",titleFromAlt:!0,onStart:function(e,o,a){var t=e[o].href.indexOf("?"),n=t>-1?e[o].href.substring(t):"";a.allowfullscreen=!(n.indexOf("fs=0")>-1),a.href=e[o].href.replace(/https?:\/\/(?:www\.)?youtu(?:\.be\/([^\?]+)\??|be\.com\/watch\?(.*(?=v=))v=([^&]+))(.*)/gi,"https://www.youtube.com/embed/$1$3?$2$4&autoplay=1")}}))})};jQuery("a.fancybox-close").on("click",function(e){e.preventDefault(),jQuery.fancybox.close()})}var easy_fancybox_auto=function(){setTimeout(function(){jQuery("#fancybox-auto").trigger("click")},1e3)};jQuery(easy_fancybox_handler),jQuery(document).on("post-load",easy_fancybox_handler),jQuery(easy_fancybox_auto);
-    </script>
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ site.ga_account_id }}']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </body>
 </html>

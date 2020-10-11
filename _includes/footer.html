@@ -5,7 +5,80 @@
         </div>
 
         <div id="bottomsearch">
-        {% include search.html %}
+        {% include search-input.html %}
         </div>
     </div>
 </footer>
+
+<script type='text/javascript'>
+    var fb_timeout,fb_opts={overlayShow:!0,hideOnOverlayClick:!0,overlayColor:"#000",showCloseButton:!0,margin:20,centerOnScroll:!0,enableEscapeButton:!0,autoScale:!0};if(void 0===easy_fancybox_handler){var easy_fancybox_handler=function(){jQuery('.nofancybox,a.wp-block-file__button,a.pin-it-button,a[href*="pinterest.com/pin/create"],a[href*="facebook.com/share"],a[href*="twitter.com/share"]').addClass("nolightbox");jQuery('a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpg"]:not(.nolightbox),a[href*=".gif"]:not(.nolightbox,li.nolightbox>a),area[href*=".gif"]:not(.nolightbox),a[href*=".png"]:not(.nolightbox,li.nolightbox>a),area[href*=".png"]:not(.nolightbox)').addClass("fancybox image").attr("rel","gallery"),jQuery("a.fancybox,area.fancybox,li.fancybox a").each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{easingIn:"linear",easingOut:"linear",opacity:!1,hideOnContentClick:!1,titleShow:!0,titleFromAlt:!0,showNavArrows:!0,enableKeyboardNav:!0,cyclic:!1}))}),jQuery("a.fancybox-youtube,area.fancybox-youtube,li.fancybox-youtube a").each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{type:"iframe",width:640,height:390,padding:0,keepRatio:1,titleShow:!1,titlePosition:"float",titleFromAlt:!0,onStart:function(e,o,a){var t=e[o].href.indexOf("?"),n=t>-1?e[o].href.substring(t):"";a.allowfullscreen=!(n.indexOf("fs=0")>-1),a.href=e[o].href.replace(/https?:\/\/(?:www\.)?youtu(?:\.be\/([^\?]+)\??|be\.com\/watch\?(.*(?=v=))v=([^&]+))(.*)/gi,"https://www.youtube.com/embed/$1$3?$2$4&autoplay=1")}}))})};jQuery("a.fancybox-close").on("click",function(e){e.preventDefault(),jQuery.fancybox.close()})}var easy_fancybox_auto=function(){setTimeout(function(){jQuery("#fancybox-auto").trigger("click")},1e3)};jQuery(easy_fancybox_handler),jQuery(document).on("post-load",easy_fancybox_handler),jQuery(easy_fancybox_auto);
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.ga_account_id }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    window.store = {
+    {% for film in site.films %}
+      {%- assign roles = film.roles | join: ", " -%}
+      {%- assign formats = film.formats | join: ", " -%}
+      {%- assign screenings = "" | split: "" -%}
+      {%- for screening in film.selected_screenings -%}
+        {%- assign screenings = screenings | push: screening.name -%}
+      {%- endfor -%}
+      {%- assign screenings = screenings | join: ", " -%}
+      {%- assign awards = "" | split: "" -%}
+      {%- for award in film.awards -%}
+        {%- assign awards = awards | push: award.name -%}
+      {%- endfor -%}
+      {%- assign awards = awards | join: ", " -%}
+      {%- assign content = roles | append: ", " | append: formats -%}
+      {%- assign content = content | append: ", " | append: screenings -%}
+      {%- assign content = content | append: ", " | append: awards -%}
+      {%- assign content = content | append: ", " | append: film.genre -%}
+      {%- assign content = content | append: ", " | append: film.language -%}
+      "{{ film.url | slugify }}": {
+        "title": "{{ film.title | xml_escape }}",
+        "description": "{{ film.synopsis | xml_escape }}",
+        "alt": "{{ film.alternate_title | xml_escape }}",
+        "content": {{ content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ film.url | xml_escape | absolute_url }}"
+      },
+      {% endfor %}
+      {%- for page in site.pages -%}
+      {%- assign content = page.content | strip_html | strip_newlines -%}
+      {%- assign description = content | truncatewords: 50, " [...]" -%}
+      {%- if page.url == "/films/older-films/" -%}
+        {%- for film in site.older_films -%}
+          {%- assign description = film.description -%}
+          {%- assign roles = film.roles | join: ", " -%}
+          {%- assign formats = film.formats | join: ", " -%}
+          {%- assign awards = "" | split: "" -%}
+          {%- for award in film.awards -%}
+            {%- assign awards = awards | push: award.name -%}
+          {%- endfor -%}
+          {%- assign awards = awards | join: ", " -%}
+          {%- assign content = content | append: ", " | append: roles -%}
+          {%- assign content = content | append: ", " | append: formats -%}
+          {%- assign content = content | append: ", " | append: screenings -%}
+          {%- assign content = content | append: ", " | append: awards -%}
+          {%- assign content = content | append: ", " | append: film.genre -%}
+        {%- endfor -%}
+      {%- endif -%}
+      "{{ page.url | slugify }}": {
+        "title": "{{ page.title | xml_escape }}",
+        "description": "{{ description | xml_escape }}",
+        "alt": "{{ description | xml_escape }}",
+        "content": {{ content | jsonify }},
+        "url": "{{ page.url | xml_escape | absolute_url }}"
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+</script>
+<script src="{{ 'assets/js/lunr.min.js' | absolute_url }}"></script>
+<script type="text/javascript" src="{{ 'assets/js/search.js' | absolute_url }}"></script>

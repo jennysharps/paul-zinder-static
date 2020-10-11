@@ -4,7 +4,7 @@ layout: page
 permalink: /about/
 ---
 
-<span class="fl padding-right">
+<span class="content-img">
     <img class='page' width="230" height="169" alt="" title="site pic 2" src="{{ 'assets/images/2011/06/site-pic-2.jpg' | absolute_url }}" />
 </span>
 

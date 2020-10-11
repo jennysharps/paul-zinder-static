@@ -71,7 +71,7 @@ body {
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   line-height: 1.5;
   color: #7a7a7a;
-  font-size: 14px;
+  font-size: 16px;
   max-width: 100%;
   height: auto;
 }
@@ -139,6 +139,10 @@ p {
 }
 
 @media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+    
   h1, .h1 {
     margin: 15px 0;
   }
@@ -1049,18 +1053,19 @@ a:hover {
   padding: 5px 20px;
 }
 
-.padding-right {
+.content-img {
+  float: left;
   padding: 0 25px 10px 0;
 }
 
 @media (max-width: 415px) {
-  .fl.padding-right {
+  .content-img {
     padding: 0;
     float: none;
     text-align: center;
   }
 
-  .fl.padding-right img.border, .fl.padding-right img.page {
+  .content-img img.border, .content-img img.page {
     margin: 0 auto;
   }
 }
@@ -1611,7 +1616,7 @@ SLIDER
   .carousel.slick-initialized {
     visibility: visible;
   }
-  
+
   .carousel li {
     padding: 25px;
     margin: 0;
@@ -1621,6 +1626,25 @@ SLIDER
 /**************
 SEARCH
 **************/
+.search-header {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.search-result {
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.search-result h2 + p {
+  margin: 0;
+}
+
 #bottomsearch {
   width: 310px;
   position: relative;
@@ -1638,6 +1662,38 @@ SEARCH
   color: #fff;
 }
 
+#live-search-results {
+  display: block;
+  width: 100%;
+  border: solid 1px #ccc;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom-width: 0;
+}
+
+#live-search-results:empty {
+  display: none;
+}
+
+.live-search-result {
+  width: 100%;
+}
+
+.live-search-result a,
+.live-search-result.none {
+  color: #000;
+  background-color: #fff;
+  display: block;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.live-search-result a:hover {
+  background-color: #ccc;
+}
+
 #bottomsearch #searchform_bottom {
   margin: 0;
 }
@@ -1646,7 +1702,8 @@ SEARCH
   border: none;
 }
 input#s,
-input.field {
+input.field,
+input.field::placeholder {
   background: transparent;
   color: #ccc;
   border: none;
