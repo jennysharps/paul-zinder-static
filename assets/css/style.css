@@ -1425,14 +1425,6 @@ h6 {
 /************************************************************************************
 SLIDER
 *************************************************************************************/
-.carousel {
-  visibility: hidden;
-}
-
-.carousel.slick-initialized {
-  visibility: visible;
-}
-
 .carousel li {
   background-color: #fff;
   border: solid 1px #ccc;
@@ -1612,6 +1604,14 @@ SLIDER
 }
 
 @media (min-width: 768px) {
+  .carousel {
+    visibility: hidden;
+  }
+  
+  .carousel.slick-initialized {
+    visibility: visible;
+  }
+  
   .carousel li {
     padding: 25px;
     margin: 0;
