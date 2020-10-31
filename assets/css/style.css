@@ -76,6 +76,9 @@ body {
   height: auto;
 }
 
+
+input, select { font-size: 100%; }
+
 h1,
 h2,
 h3,
