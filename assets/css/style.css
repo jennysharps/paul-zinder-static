@@ -93,6 +93,10 @@ h6,
   letter-spacing: 0.06em;
 }
 
+cite cite {
+  font-style: normal;
+}
+
 .label-required:after {
   content: "*";
   color: #436222;
