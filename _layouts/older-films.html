@@ -16,11 +16,11 @@ layout: page
             </span>	
 
             <p>
-                {% if film.roles and film.roles.size %}Roles: {{ film.roles | join: ', ' }}{% endif %}
+                {% if film.roles and film.roles.size %}Role{% if film.roles.size > 1 %}s{% endif %}: {{ film.roles | join: ', ' }}{% endif %}
                 <br />
                 {% if film.genre %}Genre: {{ film.genre }}{% endif %}
                 <br />
-                {% if film.formats and film.formats.size %}Formats: {{ film.formats | join: ', ' }}{% endif %}
+                {% if film.formats and film.formats.size %}Format{% if film.formats.size > 1 %}s{% endif %}: {{ film.formats | join: ', ' }}{% endif %}
                 <br />
                 {% if film.length %}Length: {{ film.length }} {% endif %}
                 <br />

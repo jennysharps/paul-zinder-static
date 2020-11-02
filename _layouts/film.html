@@ -43,7 +43,7 @@ layout: page
         <ul>
             {% if page.roles.size %}
             <li>
-                <span class='heading'>Role{% if pages.roles.size > 1 %}s{% endif %}</span>
+                <span class='heading'>Role{% if page.roles.size > 1 %}s{% endif %}</span>
                 <span class='text'>{{ page.roles | join: ", " }}</span>
             </li>
             {% endif %}
@@ -57,7 +57,7 @@ layout: page
 
             {% if page.formats.size %}
             <li>
-                <span class='heading'>Exhibition Format{% if pages.formats.size > 1 %}s{% endif %}</span>
+                <span class='heading'>Exhibition Format{% if page.formats.size > 1 %}s{% endif %}</span>
                 <span class='text'>{{ page.formats | join: ", " }}</span>
             </li>
             {% endif %}
