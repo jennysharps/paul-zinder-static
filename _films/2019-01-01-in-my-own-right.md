@@ -16,12 +16,15 @@ language: English
 selected_screenings:
   - name: Miami Independent Film Festival
     year: 2019
+    type: festival
   - name: Near Nazareth Film Festival
     location: Afula, Israel
     year: 2019
+    type: festival
   - name: Urban Jewish Heritage Conference
     location: Early Cut screened - Krakow, Poland
     year: 2018
+    type: screening
 awards:
   - name: 'Finalist: Peter C. Rollins Award for Best Documentary – National Popular Culture Association Conference (Washington, D.C.)'
     year: 2019

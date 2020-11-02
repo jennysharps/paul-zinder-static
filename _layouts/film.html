@@ -43,7 +43,7 @@ layout: page
         <ul>
             {% if page.roles.size %}
             <li>
-                <span class='heading'>Roles</span>
+                <span class='heading'>Role{% if pages.roles.size > 1 %}s{% endif %}</span>
                 <span class='text'>{{ page.roles | join: ", " }}</span>
             </li>
             {% endif %}
@@ -57,7 +57,7 @@ layout: page
 
             {% if page.formats.size %}
             <li>
-                <span class='heading'>Exhibition Formats</span>
+                <span class='heading'>Exhibition Format{% if pages.formats.size > 1 %}s{% endif %}</span>
                 <span class='text'>{{ page.formats | join: ", " }}</span>
             </li>
             {% endif %}
@@ -81,8 +81,14 @@ layout: page
 
 <div class='video-awards-container'>
     {% if page.selected_screenings.size > 0 %}
+    {% assign has_festivals = false %}
+    {% for screening in page.selected_screenings %}
+        {% if screening.type == "festival" %}
+            {% assign has_festivals = true %}
+        {% endif %}
+    {% endfor %}
     <div id='screenings'>
-        <h2 class='heading'>Festivals & Selected Screenings</h2>
+        <h2 class='heading'>{% if has_festivals %}Festivals & {% endif %}Selected Screenings</h2>
 
         {% for screening in page.selected_screenings %}
         <p>
@@ -100,7 +106,7 @@ layout: page
 
     {% if page.awards.size > 0 %}
     <div id='awards' class='{% if page.selected_screenings.size %}screenings-awards{% endif %}'>
-        <h2 class='heading'>Awards</h2>
+        <h2 class='heading'>Award{% if page.awards.size > 1 %}s{% endif %}</h2>
         {% for award in page.awards %}
             <p>
                 <span class="award_name">{{ award.name }},</span> {{ award.year }}
@@ -143,7 +149,7 @@ layout: page
     </div>
     {% else %}
     <div class="next">
-        <a href="{{ 'older-films' | absolute_url }}" rel="next">
+        <a href="{{ 'films/older-films' | absolute_url }}" rel="next">
             <span class="italic">Older Films</span> &raquo;
         </a>
     </div>

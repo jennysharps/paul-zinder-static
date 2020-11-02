@@ -22,18 +22,23 @@ selected_screenings:
   - name: University of Gloucestershire School of Media - Cineworld Screening Fundraiser
     location: UK
     year: 2015
+    type: screening
   - name: Black Maria Film and Video Festival
     location: International Tour
     year: 2001
+    type: festival
   - name: Chicago Underground Film Festival
     location: Illinois
     year: 2001
+    type: festival
   - name: San Antonio Underground Film Festival
     location: Texas
     year: 2001
+    type: festival
   - name: Thaw '01
     location: Iowa City, Iowa
     year: 2001
+    type: festival
 awards:
   - name: Black Maria Film & Video Festival – Director’s Citation
     year: 2001

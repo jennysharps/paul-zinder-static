@@ -19,22 +19,28 @@ selected_screenings:
   - name: Black Maria Film Festival and The National Gallery of Art
     location: international tour
     year: 2016 - 2017
+    type: festival
   - name: Los Angeles Short Film Festival
     year: 2016
+    type: festival
   - name: Walthamstow International Film Festival
     location: London, UK
     year: 2016
+    type: festival
   - name: Canada Shorts
     year: 2015
   - name: Croydon International Film Festival
     location: London, UK
     year: 2015
+    type: festival
   - name: Sunscreen Film Festival
     location: Los Angeles, CA
     year: 2015
+    type: festival
   - name: Virginia Film Festival
     location: Charlottesville, VA
     year: 2015
+    type: festival
 awards:
   - name: Black Maria Film Festival – Director’s Choice Award
     year: 2016

@@ -23,24 +23,31 @@ selected_screenings:
   - name: Reel to Real International Film Festival for Youth
     location: British Columbia, Canada
     year: 2012
+    type: festival
   - name: WorldKids International Film Festival
     location: national tour, India
     year: 2011
+    type: festival
   - name: Atlanta Film Festival
     location: Georgia
     year: 2010
+    type: festival
   - name: Black Maria Film and Video Festival
     location: International tour
     year: 2010
+    type: festival
   - name: Columbia Gorge International Film Festival
     location: Washington state
     year: 2010
+    type: festival
   - name: Dawson City International Short Film Festival
     location: Yukon, Canada
     year: 2010
+    type: festival
   - name: Leiden International Short Film Festival
     location: Netherlands
     year: 2010
+    type: festival
 awards:
   - name: Black Maria Film and Video Festival – Director’s Choice Award
     year: 2010

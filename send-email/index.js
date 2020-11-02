@@ -3,7 +3,7 @@ const mask = require("@moneytree/mask-pii");
 const nodemailer = require("nodemailer");
 const logger = require("./logging");
 
-['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASSWORD', 'EMAIL_TO_ADDRESS', 'RECAPTCHA_SECRET'].forEach((requiredConfigKey) => {
+['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASSWORD', 'EMAIL_TO_ADDRESS', 'EMAIL_FROM_ADDRESS', 'RECAPTCHA_SECRET'].forEach((requiredConfigKey) => {
     if (!process.env[requiredConfigKey]) {
         throw new Error(`missing config: ${requiredConfigKey} is required`);
     }
@@ -94,11 +94,11 @@ exports.sendEmail = async (req, res) => {
         logger.info("Captcha passed verification");
 
         const message = {
-            from: process.env.SMTP_USER,
+            from: process.env.EMAIL_FROM_ADDRESS,
             to: process.env.EMAIL_TO_ADDRESS,
             replyTo: req.body.email,
             subject: `[Web Contact]: Message via ${origin}`,
-            text: `Name: ${req.body.name}\nEmail: ${req.body.email},\nMessage:\n${req.body.message}`
+            text: `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage:\n${req.body.message}`
         };
 
         await transport.sendMail(message);

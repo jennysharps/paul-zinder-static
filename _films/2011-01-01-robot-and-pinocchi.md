@@ -23,21 +23,27 @@ selected_screenings:
   - name: Black Maria Film and Video Festival
     location: International tour
     year: 2012
+    type: festival
   - name: Byron Bay International Film Festival
     location: Australia
     year: 2012
+    type: festival
   - name: Reel Earth Environmental Film Festival
     location: Palmerston, New Zealand
     year: 2012
+    type: festival
   - name: Taos Shortz Film Festival
     location: New Mexico
     year: 2012
+    type: festival
   - name: University of Gloucestershire - Visiting Speaker Series
     location: UK
     year: 2012
+    type: festival
   - name: St. Louis International Film Festival
     location: Missouri
     year: 2011
+    type: festival
 awards:
   - name: Black Maria Film and Video Festival – Director’s Choice Award
     year: 2012

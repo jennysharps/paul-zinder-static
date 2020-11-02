@@ -20,9 +20,10 @@
     <script type="text/javascript" src="{{ 'assets/js/cufon.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/fonts/League_Gothic.font.js' | absolute_url }}"></script>
     <script type="text/javascript" src="{{ 'assets/fonts/ChunkFive.font.js' | absolute_url }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ site.recaptcha_site_key }}"></script>
   </head>
 
-  <body class="page-template-default page page-id-19 chrome">
+  <body class="page-template-default page {{ page.title | slugify }}">
     {% include header.html %}
 
     <main class="content-container">

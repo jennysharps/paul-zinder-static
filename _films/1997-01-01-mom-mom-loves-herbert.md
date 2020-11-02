@@ -23,24 +23,31 @@ selected_screenings:
   - name: John’s Hopkins Office of Cultural Affairs – Multimedia Discussions
     location: Baltimore, MD
     year: 2000
+    type: screening
   - name: International Jewish Film Festival
     location: Los Angeles, CA
     year: 1999
+    type: festival
   - name: Maryland Film Festival
     location: Baltimore, MD
     year: 1999
+    type: festival
   - name: Maryland Film Festival Tour
     location: state tour, Maryland
     year: 1999
+    type: festival
   - name: Rhode Island International Film Festival
     location: Providence, RI
     year: 1999
+    type: festival
   - name: Athens International Film and Video Festival
     location: Ohio
     year: 1997
+    type: festival
   - name: Hoyt’s New Filmmaker’s Showcase
     location: Syracuse, NY
     year: 1997
+    type: screening
 awards:
   - name: Kodak Production Grant
     year: 1996 - 1996

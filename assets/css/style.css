@@ -390,7 +390,7 @@ h6 a:hover {
   margin: 0;
   border-top: 10px solid #d9d9d9;
   padding-top: 26px;
-  padding-bottom: 26px;
+  padding-bottom: 55px;
   min-height: 55px;
 }
 
@@ -428,6 +428,10 @@ h6 a:hover {
 }
 
 @media (min-width: 768px) {
+  .site-footer {
+    padding-bottom: 26px;
+  }
+
   .site-footer .content-container {
     flex-direction: row;
   }
@@ -1653,6 +1657,7 @@ SEARCH
 }
 
 #bottomsearch {
+  max-width: 100%;
   width: 310px;
   position: relative;
   height: 25px;
@@ -2086,12 +2091,14 @@ CONTENT OF ARCHIVE
   background-color: rgba(0, 0, 0, .15);
 }
 
-.g-recaptcha {
-  left: 30%;
-  position: relative;
-  margin-left: 25px;
+.grecaptcha-badge {
+  display: none;
+  bottom: 5px !important;
 }
 
+.contact .grecaptcha-badge {
+  display: block;
+}
 
 /****clearfix for .entry****/
 .entry:after {
