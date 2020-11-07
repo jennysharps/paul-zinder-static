@@ -4,6 +4,8 @@ layout: page
 <script src="{{ 'assets/js/jquery-3.4.0-validate.min.js' | absolute_url }}"></script>
 <script>
 jQuery(document).ready(function($) {
+    $('.disabled-no-js').removeAttr("disabled").removeClass("disabled-no-js");
+
     $(".form").validate({
         submitHandler: function(form, e) {
             e.preventDefault();
@@ -63,16 +65,16 @@ jQuery(document).ready(function($) {
                 
                 {% case field.type %}
                 {% when "textarea" %}
-                    <textarea id="{{ field_id }}" class="form-field form-field-medium {% if field.required %}form-field-required{% endif %}" name="{{ field.name }}" {% if field.required %}required{% endif %}></textarea>
+                    <textarea disabled id="{{ field_id }}" class="disabled-no-js form-field form-field-medium {% if field.required %}form-field-required{% endif %}" name="{{ field.name }}" {% if field.required %}required{% endif %}></textarea>
                 {% else %}
-                    <input id="{{ field_id }}" type="{{ field.type }}" class="form-field form-field-medium {% if field.required %}form-field-required{% endif %}" name="{{ field.name }}" {% if field.required %}required{% endif %}>
+                    <input disabled id="{{ field_id }}" type="{{ field.type }}" class="disabled-no-js form-field form-field-medium {% if field.required %}form-field-required{% endif %}" name="{{ field.name }}" {% if field.required %}required{% endif %}>
                 {% endcase %}
             </div>
         {% endfor %}
         </div>
 
-        <div class="form-submit-container">            
-            <button type="submit" class="button form-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Send">
+        <div class="form-submit-container">          
+            <button type="submit" disabled class="disabled-no-js button form-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Send">
                 {{ page.form_submit_text | default: "Submit" }}
             </button>
         </div>
