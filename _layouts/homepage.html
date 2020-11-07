@@ -34,6 +34,14 @@ layout: default
     });
 </script>
 
+<noscript>
+    <style type="text/css">
+        .center { text-align: center; }
+        .carousel { visibility: visible; }
+        .carousel li { margin: 25px 0; }
+    </style>
+</noscript>
+
 <ul class='carousel'>
 {% for film in page.featured_films %}
     <li>
@@ -43,4 +51,11 @@ layout: default
     </li>
 {% endfor %}
 </ul>
+
+<noscript>
+    <div class="center">
+        <p>Please enable JavaScript for a better browsing experience.</p>
+    </div>
+</noscript>
+
 

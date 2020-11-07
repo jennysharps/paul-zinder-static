@@ -973,7 +973,6 @@ a:hover {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.05em;
-  word-spacing: 0.15em;
 }
 
 .curved {
@@ -1294,7 +1293,7 @@ h2.heading {
   }
 
   .watch-button {
-    width: 105px;
+    width: auto;
     padding-top: 0;
     padding-bottom: 0;
     margin-left: 25px;
