@@ -22,7 +22,7 @@ selected_screenings:
     year: 2019
     type: festival
   - name: Urban Jewish Heritage Conference
-    location: Early Cut screened - Krakow, Poland
+    location: early cut screened - Krakow, Poland
     year: 2018
     type: screening
 awards:
