@@ -20,7 +20,7 @@
 
 
 baseurl: "/paul-zinder-static" # the subpath of your site, e.g. /paul-zinder-static
-url: "https://jennysharps.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.paulzinder.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # theme: minima
