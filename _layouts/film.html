@@ -23,7 +23,7 @@ layout: page
                 
             <div>
                 {% if page.vimeo_id %}
-                    <a class="video button watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', '{{ page.title }}']);">
+                    <a class="video button watch-button fancybox-youtube" href="//player.vimeo.com/video/{{ page.vimeo_id }}?autoplay=1&quality=720p" onClick="ga('send', { hitType: 'event', eventCategory: 'Videos', eventAction: 'Play', eventLabel: '{{ page.title }}' });">
                         <h2>Watch Film</h2>
                     </a>
                 {% endif %}
