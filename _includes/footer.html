@@ -50,7 +50,10 @@
         "url": "{{ film.url | xml_escape | absolute_url }}"
       },
       {% endfor %}
-      {%- for page in site.pages -%}
+      {%- assign pages = site.pages | where_exp: "page", "page.layout != nil" -%}
+      {%- assign pages = pages | where_exp: "page", "page.url != '/search/'" -%}
+      {%- assign pages = pages | where_exp: "page", "page.url != '/404.html'" -%}
+      {%- for page in pages -%}
       {%- assign content = page.content | strip_html | strip_newlines -%}
       {%- assign description = content | truncatewords: 50, " [...]" -%}
       {%- if page.url == "/films/older-films/" -%}
@@ -70,7 +73,7 @@
           {%- assign content = content | append: ", " | append: film.genre -%}
         {%- endfor -%}
       {%- endif -%}
-      "{{ page.url | slugify }}": {
+      "{{ page.url | slugify | default: 'home'}}": {
         "title": "{{ page.title | xml_escape }}",
         "description": "{{ description | xml_escape }}",
         "alt": "{{ description | xml_escape }}",

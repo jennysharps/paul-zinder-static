@@ -18,7 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-
 # baseurl: "/paul-zinder-static" # the subpath of your site, e.g. /paul-zinder-static
 url: "https://www.paulzinder.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -26,6 +25,7 @@ url: "https://www.paulzinder.com" # the base hostname & protocol for your site, 
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -49,10 +49,10 @@ plugins:
 
 name: Paul Zinder
 title: Paul Zinder
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >-
+  Paul Zinder: award-winning filmmaker whose work has screened internationally,
+  a published writer in cult television studies, and a university lecturer in
+  film production for almost twenty years.
 ga_account_id: UA-23346786-4
 recaptcha_site_key: 6LclWNMZAAAAAAl1DsZKwb7IlVuK660aCfIg7_LU
 collections:

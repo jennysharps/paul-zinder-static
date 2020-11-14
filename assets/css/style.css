@@ -1000,10 +1000,13 @@ a:hover {
 .page-navigation {
   display: flex;
   margin: 10px 0;
+  flex-direction: column;
+  text-align: center;
 }
 
-.page-navigation .next {
-  margin-left: auto;
+.page-navigation > div  {
+  margin: 5px 0;
+  text-align: center;
 }
 
 .older-videos-container {
@@ -1023,6 +1026,20 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .page-navigation {
+    flex-direction: row;
+    margin: 5 0;
+  }
+
+  .page-navigation > div  {
+    margin: 0;
+    text-align: center;
+  }
+
+  .page-navigation .next {
+    margin-left: auto;
+  }  
+
   .older-videos-container {
     flex-direction: row;
   }

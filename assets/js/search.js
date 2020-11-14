@@ -64,16 +64,16 @@ jQuery(document).ready(function($) {
     });
 
 
-    var searchTerm = getQueryVariable('s');
+    var searchTerm = getQueryVariable('s') || "";
+    var searchResultsEl = $('#search-results');
+    var noResultsHtml = `<div class="search-result none"><h2>No Results</a></h2>`;
+    $('.search-term').html(`"${searchTerm}"`);
 
     if (searchTerm) {
-        $('.search-term').html(`"${searchTerm}"`);
-
         var matches = idx.search(searchTerm + "* " + searchTerm + "~1")
             .map(function(m) { return window.store[m.ref]; })
             .filter(function(m) { return m.title });
-        var searchResultsEl = $('#search-results');
-
+        
         if (matches.length) {
             var itemsHtml = "";
             matches.forEach(function(item) {
@@ -81,7 +81,9 @@ jQuery(document).ready(function($) {
             });
             searchResultsEl.html(itemsHtml);
         } else {
-            searchResultsEl.html(`<div class="search-result none"><h2>No Results</a></h2>`);
+            searchResultsEl.html(noResultsHtml);
         }
+    } else {
+        searchResultsEl.html(noResultsHtml);
     }
 });
