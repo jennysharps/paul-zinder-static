@@ -48,7 +48,7 @@ layout: page
         
         {% for award in awards %}
         <p>
-            {{ award.year }}: {{ award.name }} (for {{ award_films[forloop.index0].title }})
+            {{ award.year }}: {{ award.name }} (for <cite>{{ award_films[forloop.index0].title }}</cite>)
         </p>
         {% endfor %}
     </div>
