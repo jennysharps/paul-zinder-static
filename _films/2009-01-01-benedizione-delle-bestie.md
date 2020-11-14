@@ -1,12 +1,18 @@
 ---
 title: Benediction of the Beasts
+description: >-
+  Award-winning Documentary film showcasing the ancient Italian tradition of
+  bringing pets to church to have them blessed. Directed and filmed by Paul
+  Zinder.
 layout: film
 alternate_title: Benedizione delle Bestie
 image:
   name: 'assets/images/2011/06/Picture-1'
   extension: jpg
 vimeo_id: 153887941
-synopsis: Each January, on the steps of a 5th century church in Rome’s most derelict neighborhood, man and beast participate in an ancient rite.
+synopsis: >-
+  Each January, on the steps of a 5th century church in Rome’s most derelict
+  neighborhood, man and beast participate in an ancient rite.
 year: 2009
 roles:
   - Director

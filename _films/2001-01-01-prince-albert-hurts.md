@@ -1,10 +1,20 @@
 ---
 title: Prince Albert Hurts
+description: >-
+  Documentary film about a man named Joe as he embarks on getting the infamous
+  “Prince Albert” gentical piercing as his first foray into mody modification.
+  Directed, produced, filmed, and edited by Paul Zinder.
 layout: film
 image:
   name: 'assets/images/2011/06/Prince-poster-image-for-top-of-page'
   extension: jpg
-synopsis: Joe chooses the infamous “Prince Albert” genital piercing as his first foray into body modification. Melissa has never performed a Prince Albert on a client, but is game for anything. The Prince Albert usually takes approximately 50 seconds to complete. Joe and Melissa’s first shot becomes an 11 minutes-plus odyssey, brimming with patience, pain, humor, hope, and triumph.
+synopsis: >-
+  Joe chooses the infamous “Prince Albert” genital piercing as his first foray
+  into body modification. Melissa has never performed a Prince Albert on a
+  client, but is game for anything. The Prince Albert usually takes
+  approximately 50 seconds to complete. Joe and Melissa’s first shot becomes an
+  11 minutes-plus odyssey, brimming with patience, pain, humor, hope, and
+  triumph.
 year: 2001
 roles:
   - Director

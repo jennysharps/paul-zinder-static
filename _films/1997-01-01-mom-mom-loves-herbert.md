@@ -1,13 +1,21 @@
 ---
 title: Mom Mom Loves Herbert
+description: >-
+  Filmmaker Paul Zinder explores his parents Herb and Marg's mixed marriage
+  utilizing mixed documentary techniques. Directed, written, produced, filmed,
+  and edited by Paul Zinder.
 layout: film
 image:
   name: 'assets/images/2011/06/Baltimore-bench'
   extension: jpg
-synopsis: Herb and Marg may be teenagers in love, but he’s Jewish and she’s Catholic, and their mothers are not happy about the impending marriage. Filmmaker Paul Zinder explores his parents’ mixed marriage by utilizing mixed documentary techniques, all in an effort to discover the keys to a happy union.
+synopsis: >-
+  Herb and Marg may be teenagers in love, but he’s Jewish and she’s Catholic,
+  and their mothers are not happy about the impending marriage. Filmmaker Paul
+  Zinder explores his parents’ mixed marriage by utilizing mixed documentary
+  techniques, all in an effort to discover the keys to a happy union.
 year: 1997
 roles:
-  - Director
+  - Directors
   - Writer
   - Producer
   - DoP

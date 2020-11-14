@@ -1,10 +1,24 @@
 ---
 title: In My Own Right
+description: >-
+  Documentary film about the first female chairperson of an Orthodox Jewish
+  Synagogue Jenny Silverston, who works to save a community formerly dependent
+  on men to survive. Directed by Paul Zinder.
+keywords:
+  - cheltenham
+  - jenny silverston
+  - first female chairperson
+  - orthodox jewish synagogue
+  - england
+  - abigail fisher
 layout: film
 image:
   name: 'assets/images/2020/01/in-my-own-right-03'
   extension: png
-synopsis: Jenny Silverston, the first female chairperson of a 176-year-old Orthodox Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail Fisher, to save a religious community formerly dependent on men to survive.
+synopsis: >-
+  Jenny Silverston, the first female chairperson of a 176-year-old Orthodox
+  Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail
+  Fisher, to save a religious community formerly dependent on men to survive.
 year: 2019
 roles:
   - Director

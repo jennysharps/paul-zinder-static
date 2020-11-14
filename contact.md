@@ -1,5 +1,9 @@
 ---
 title: Contact
+description: >-
+  Contact Paul Zinder, award-winning film and video-maker, published author,
+  and teacher for over 20 years. Send him a message and he&#039;ll get back to
+  you.
 layout: form
 permalink: /contact/
 form_action: "https://us-central1-paul-zinder.cloudfunctions.net/send-email"

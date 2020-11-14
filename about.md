@@ -1,5 +1,9 @@
 ---
 title: About
+description: >-
+    Paul Zinder is an award-winning filmmaker whose work has screened
+    internationally, a published writer in cult television studies, and a
+    university lecturer in film production for over twenty years.
 layout: page
 permalink: /about/
 ---

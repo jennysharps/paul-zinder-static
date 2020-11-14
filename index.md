@@ -1,5 +1,9 @@
 ---
 title: Home
+description: >-
+  Paul Zinder: award-winning filmmaker whose work has screened internationally,
+  a published writer in cult television studies, and a university lecturer in
+  film production for almost twenty years.
 layout: homepage
 featured_films:
     - title: One of the Last

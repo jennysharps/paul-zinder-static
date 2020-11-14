@@ -1,12 +1,17 @@
 ---
 title: One of the Last
+description: >-
+  Award-winning Documentary about a 78-year-old Italian farmer named Mauro who
+  loves his fading lifestyle. Directed, written, and produced by Paul Zinder.
 layout: film
 alternate_title: Uno degli Ultimi
 image:
   name: 'assets/images/2011/06/uno_degli_ultimi_2'
   extension: jpg
 vimeo_id: 153887531
-synopsis: Mauro is a 78-year-old Italian farmer who loves his life.  He picks olives, grapes, cherries.  He wonders why anybody would want to do anything else.
+synopsis: >-
+  Mauro is a 78-year-old Italian farmer who loves his life. He picks olives,
+  grapes, cherries.  He wonders why anybody would want to do anything else.
 year: 2007
 roles:
   - Director

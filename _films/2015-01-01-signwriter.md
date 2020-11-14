@@ -1,11 +1,18 @@
 ---
 title: Signwriter
+description: >-
+  Documentary film about painter Graham Brown, who has been painting canal boats
+  on Gloucester's docks for sixty years. Directed and produced by Paul Zinder.
+  Commissioned by the UK Canal and River Trust.
 layout: film
 image:
   name: 'assets/images/2011/06/Signwriter-by-Paul-Zinder-still'
   extension: jpg
 vimeo_id: 134313805
-synopsis: This short, commissioned by the UK’s Canal and River Trust, is a portrait of Graham Brown, a painter of canal boats on Gloucester’s docks. For sixty years, Graham’s work has been his art.
+synopsis: >-
+  This short, commissioned by the UK’s Canal and River Trust, is a portrait of
+  Graham Brown, a painter of canal boats on Gloucester’s docks. For sixty years,
+  Graham’s work has been his art.
 year: 2015
 roles:
   - Director
