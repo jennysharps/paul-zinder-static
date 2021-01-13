@@ -58,7 +58,7 @@ selected_screenings:
     type: screening
 awards:
   - name: Kodak Production Grant
-    year: 1996 - 1996
+    year: 1996 - 1997
 gallery_images:
 - name: 'assets/images/2011/06/Baltimore-LS'
   extension: jpg
