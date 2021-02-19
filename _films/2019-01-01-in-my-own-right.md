@@ -15,6 +15,7 @@ layout: film
 image:
   name: 'assets/images/2020/01/in-my-own-right-03'
   extension: png
+vimeo_id: 495727227
 synopsis: >-
   Jenny Silverston, the first female chairperson of a 176-year-old Orthodox
   Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail
