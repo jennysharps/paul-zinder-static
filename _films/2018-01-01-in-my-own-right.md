@@ -15,11 +15,12 @@ layout: film
 image:
   name: 'assets/images/2020/01/in-my-own-right-03'
   extension: png
+vimeo_id: 495727227
 synopsis: >-
   Jenny Silverston, the first female chairperson of a 176-year-old Orthodox
   Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail
   Fisher, to save a religious community formerly dependent on men to survive.
-year: 2019
+year: 2018
 roles:
   - Director
 genre: Documentary
@@ -36,7 +37,7 @@ selected_screenings:
     year: 2019
     type: festival
   - name: Urban Jewish Heritage Conference
-    location: early cut screened - Krakow, Poland
+    location: Krakow, Poland
     year: 2018
     type: screening
 awards:
