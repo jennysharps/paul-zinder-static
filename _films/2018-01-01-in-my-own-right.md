@@ -20,7 +20,7 @@ synopsis: >-
   Jenny Silverston, the first female chairperson of a 176-year-old Orthodox
   Jewish Synagogue in Cheltenham, England, works with her close friend, Abigail
   Fisher, to save a religious community formerly dependent on men to survive.
-year: 2019
+year: 2018
 roles:
   - Director
 genre: Documentary
