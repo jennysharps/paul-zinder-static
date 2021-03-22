@@ -15,7 +15,7 @@ synopsis: >-
   techniques, all in an effort to discover the keys to a happy union.
 year: 1997
 roles:
-  - Directors
+  - Director
   - Writer
   - Producer
   - DoP
