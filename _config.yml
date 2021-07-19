@@ -68,3 +68,5 @@ github:
   - metadata
 exclude:
   - send-email
+gems:
+  - jekyll-redirect-from
