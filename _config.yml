@@ -26,6 +26,7 @@ url: "https://www.paulzinder.com" # the base hostname & protocol for your site, 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -68,5 +69,3 @@ github:
   - metadata
 exclude:
   - send-email
-gems:
-  - jekyll-redirect-from
