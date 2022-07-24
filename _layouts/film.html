@@ -55,13 +55,6 @@ layout: page
             </li>
             {% endif %}
 
-            {% if page.formats.size %}
-            <li>
-                <span class='heading'>Exhibition Format{% if page.formats.size > 1 %}s{% endif %}</span>
-                <span class='text'>{{ page.formats | join: ", " }}</span>
-            </li>
-            {% endif %}
-
             {% if page.length %}
             <li>
                 <span class='heading'>Length</span>
