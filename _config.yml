@@ -68,4 +68,5 @@ kramdown:
 github:
   - metadata
 exclude:
+  - vendor
   - send-email

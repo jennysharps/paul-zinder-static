@@ -1,4 +1,8 @@
-.PHONY: local
+.phony: default
+default:
+	bundle install
+
+.phony: local
 local:
 	bundle exec jekyll serve
 

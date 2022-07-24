@@ -7,3 +7,15 @@ See [https://pages.github.com/versions/](https://pages.github.com/versions/) for
 To upgrade github pages plugin dependencies, run `bundle update github-pages`.
 
 Note: The website is a static port of an old WordPress theme.
+
+## Running Locally
+
+### Prerequisites
+
+Use rbenv to manage Ruby version locally.
+
+### Development
+
+Run `make` to install dependencies
+
+Run `make local` to run Jekyll server
