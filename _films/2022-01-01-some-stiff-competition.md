@@ -53,4 +53,8 @@ gallery_images:
     extension: jpg
   - name: 'assets/images/2022/01/some-stiff-competition-05'
     extension: jpg
+  - name: 'assets/images/2022/01/some-stiff-competition-06'
+    extension: jpg
+  - name: 'assets/images/2022/01/some-stiff-competition-07'
+    extension: jpg
 ---
