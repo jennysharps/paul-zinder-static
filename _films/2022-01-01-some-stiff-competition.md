@@ -16,10 +16,10 @@ image:
   name: 'assets/images/2022/01/some-stiff-competition-00'
   extension: jpg
 synopsis: >-
-  This short documentary follows two local families, led by a dad and a granddad
-  (one a former champion), as they compete in a local event where their
-  village’s stuffed toys get thrown off the church tower to see how far they
-  fly. But is the contest being taken a bit too seriously?
+  This short follows two local families, led by a dad and a granddad (one a
+  former champion), as they compete in a local event where their village’s
+  stuffed toys get thrown off the church tower to see how far they fly. But is
+  the contest being taken a bit too seriously?
 year: 2022
 roles:
   - Director
