@@ -30,18 +30,33 @@ formats:
 length: 15 min.
 language: English
 selected_screenings:
+  - name: Hollyshorts Film Festival Monthly Screening Series
+    location: Hollywood, CA
+    year: 2023
+    type: festival
+  - name: Berkeley Springs Film Festival
+    location: West Virginia
+    year: 2022
+    type: festival
+  - name: Boston International Kids Film Festival
+    location: Massachusetts
+    year: 2022
+    type: festival
+  - name: East Lansing Film Festival
+    location: Michigan
+    year: 2022
+    type: festival
   - name: No Coast Film Fest
     location: Emporia, Kansas
     year: 2022
     type: festival
   - name: Sebastopol Documentary Film Festival
-    location: Sebastopol, CA
+    location: California
     year: 2022
     type: festival
-  - name: HollyShorts Film Festival Monthly Screening Series
-    location: Hollywood, CA
-    year: 2022-2023
-    type: screening
+awards:
+  - name: Berkeley Springs Film Festival – Best Foreign Short Documentary
+    year: 2022
 gallery_images:
   - name: 'assets/images/2022/01/some-stiff-competition-poster-01'
     extension: jpg
