@@ -30,10 +30,6 @@ formats:
 length: 15 min.
 language: English
 selected_screenings:
-  - name: East Lansing Film Festival
-    location: Michigan
-    year: 2023
-    type: festival
   - name: Hollyshorts Film Festival Monthly Screening Series
     location: Hollywood, CA
     year: 2023
@@ -44,6 +40,10 @@ selected_screenings:
     type: festival
   - name: Boston International Kids Film Festival
     location: Massachusetts
+    year: 2022
+    type: festival
+  - name: East Lansing Film Festival
+    location: Michigan
     year: 2022
     type: festival
   - name: No Coast Film Fest
