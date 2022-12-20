@@ -30,8 +30,8 @@ formats:
 length: 15 min.
 language: English
 selected_screenings:
-  - name: Hollyshorts Film Festival Monthly Screening Series
-    location: Hollywood, CA
+  - name: Aporia International Village Film Festival
+    location: South Korea
     year: 2023
     type: festival
   - name: Berkeley Springs Film Festival
@@ -44,6 +44,10 @@ selected_screenings:
     type: festival
   - name: East Lansing Film Festival
     location: Michigan
+    year: 2022
+    type: festival
+  - name: Hardwick Gallery
+    location: Cheltenham, UK
     year: 2022
     type: festival
   - name: No Coast Film Fest
