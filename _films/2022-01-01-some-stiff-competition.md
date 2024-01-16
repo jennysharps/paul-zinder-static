@@ -15,6 +15,7 @@ layout: film
 image:
   name: 'assets/images/2022/01/some-stiff-competition-00'
   extension: jpg
+vimeo_id: 765794424
 synopsis: >-
   This short follows two local families, led by a dad and a granddad (one a
   former champion), as they compete in a local event where their village’s
