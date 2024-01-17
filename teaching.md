@@ -34,7 +34,7 @@ effectiveness and leadership in the formation of students” (2009/2010).
 
 Today, he is Senior Lecturer of Film Production at the University of
 Gloucestershire in Cheltenham, England, where he was nominated for a Staff Award
-as part of the most Outstanding Team (Film Production, 2023 and 2019), for a Student Led
+as part of the most Outstanding Team (Film Production, 2019 and 2023), for a Student Led
 Teaching Award for Most Inspiring Lecturer (2014 and 2015), and for a Staff
 Excellence Award for “promoting enterprise, employability, and wider economic,
 social and cultural benefit for the community” (2013).
