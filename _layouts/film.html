@@ -72,6 +72,12 @@ layout: page
     </div><!--close right-video-details-->
 </div><!-- close video-details-container -->
 
+{% if page.additional_info %}
+<p class="additional-info">
+    {{ page.additional_info }}
+</p>
+{% endif %}
+
 <div class='video-awards-container'>
     {% if page.selected_screenings.size > 0 %}
     {% assign has_festivals = false %}
