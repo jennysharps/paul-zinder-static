@@ -38,7 +38,3 @@ as part of the most Outstanding Team (Film Production, 2019 and 2023), for a Stu
 Teaching Award for Most Inspiring Lecturer (2014 and 2015), and for a Staff
 Excellence Award for “promoting enterprise, employability, and wider economic,
 social and cultural benefit for the community” (2013).
-
-He teaches modules for both the BA and MA in Film Production, including:
-Documentary, Narrative, Production I and II, Creative Screen Production,
-Scriptwriting, and Cult Film and Television.
