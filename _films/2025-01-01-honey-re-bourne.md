@@ -14,7 +14,7 @@ synopsis: >-
   Sam’s tutelage, he began to recognise that bees are so much more than insects.
 additional_info: >-
   <em>Honey re-Bourne</em> was created for the <em>Bees in Common</em> exhibition at The Wilson Gallery in
-  Cheltenham, England (U.K.) and runs from March – June 2025. The <em>Bees in Common</em> exhibition explores collective action and creative co-operation by including work created by both artists as well as the opportunity for visitors to make a monoprint and contribute to a collective artwork.
+  Cheltenham, England (U.K.) and runs from 15 March – 1 June 2025. The <em>Bees in Common</em> exhibition explores collective action and creative co-operation by including work created by artists as well as the opportunity for visitors to make a monoprint and contribute to a collective artwork.
 year: 2025
 roles:
   - Director
