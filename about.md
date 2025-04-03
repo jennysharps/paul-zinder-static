@@ -12,7 +12,7 @@ permalink: /about/
     <img class='page' width="230" height="169" alt="" title="site pic 2" src="{{ 'assets/images/2011/06/site-pic-2.jpg' | absolute_url }}" />
 </span>
 
-Paul Zinder is a filmmaker who makes documentaries about fascinating people and compelling cultural experiences.  His award-winning work has screened at over 80 international film festivals, including the Los Angeles Film Festival (2008), and at the National Gallery of Art in Washington, D.C. (2017).
+Paul Zinder is a documentary filmmaker and writer fascinated by people who build their lives and careers around the safeguarding of a piece of a country’s individuality.  His award-winning work has screened at over 80 international film festivals, including the Los Angeles Film Festival (2008), and at the National Gallery of Art in Washington, D.C. (2017).
 
 He’s also a writer who specialises in film genre and cult television.  Paul edited the collection <a title="The Multiple Worlds of Fringe: Essays on the J.J. Abrams Science Fiction Series" href="http://www.amazon.com/Multiple-Worlds-Fringe-Science-Fiction/dp/0786475676/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1433589206&amp;sr=1-1&amp;keywords=multiple+worlds+of+fringe" target="_blank" rel="noopener noreferrer"><cite>The Multiple Worlds of </cite>Fringe<cite>: Essays on the J. J. Abrams&#8217; Science Fiction Series</cite></a> (with Tanya R. Cochran and Sherry Ginn), which was published by McFarland in 2014.
 
