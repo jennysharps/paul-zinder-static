@@ -9,12 +9,13 @@ image:
   name: 'assets/images/2025/01/honey-re-bourne-00'
   extension: jpg
 synopsis: >-
-  Nathan was a man who lived a difficult life until he had the good fortune to meet Sam,
-  who would become his mentor and friend. After Nathan became a beekeeper under
-  Sam’s tutelage, he began to recognise that bees are so much more than insects.
+  Nathan was a man who lived a difficult life until he had the good fortune to meet Sam, who became his steadfast mentor. 
+  After Sam taught him to become a beekeeper, Nathan began to recognise that bees are so much more than insects.
 additional_info: >-
-  <em>Honey re-Bourne</em> was created for the <em>Bees in Common</em> exhibition at The Wilson Gallery in
-  Cheltenham, England (U.K.) and runs from 15 March – 1 June 2025. The <em>Bees in Common</em> exhibition explores collective action and creative co-operation by including work created by artists as well as the opportunity for visitors to make a monoprint and contribute to a collective artwork.
+  <em>Honey re-Bourne</em> was created for the <em>Bees in Common</em> exhibition at The Wilson Gallery in Cheltenham, England
+  (U.K.) and ran from 15 March – 1 June 2025. The <em>Bees in Common</em> exhibition explored collective action and creative
+  co-operation by including work created by artists as well as the opportunity for visitors to make a monoprint and contribute
+  to a collective artwork.
 year: 2025
 roles:
   - Director
