@@ -22,7 +22,7 @@ permalink: /teaching/
 ---
 
 Paul has taught film production, media studies, and screenwriting at New School
-University (NYC), Temple University (Rome), Towson University, Syracuse University,
+University (NYC), Syracuse University, Temple University (Rome), Towson University,
 and UMBC.
 
 Paul taught in Italy for 11 years as Associate Professor of Film and Digital Media and
