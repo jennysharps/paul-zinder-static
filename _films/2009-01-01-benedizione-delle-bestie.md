@@ -12,7 +12,8 @@ image:
 vimeo_id: 153887941
 synopsis: >-
   Each January, on the steps of a 5th century church in Rome’s most derelict
-  neighborhood, man and beast participate in an ancient rite.
+  neighborhood, people bring their pets to participate in an ancient rite.
+  And it's kind of fun.
 year: 2009
 roles:
   - Director
