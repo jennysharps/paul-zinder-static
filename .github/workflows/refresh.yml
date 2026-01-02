@@ -2,7 +2,7 @@ name: Pages Refresh
 
 on:
   schedule:
-    - cron: "0 0 1 1 *" # Runs every new year, on January 1 at 1am
+    - cron: "1 0 1 * *" # Runs on the first day of every month; we need it to run every new year, on January 1 at 1am, but unfortunately, GH actions disabled workflows after 60 days...
 
 jobs:
   refresh:
