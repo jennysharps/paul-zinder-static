@@ -8,7 +8,6 @@ layout: film
 image:
   name: 'assets/images/2011/06/Signwriter-by-Paul-Zinder-still'
   extension: jpg
-vimeo_id: 134313805
 synopsis: >-
   This short, commissioned by the UK’s Canal and River Trust, is a portrait of
   Graham Brown, a painter of canal boats on Gloucester’s docks. For sixty years,

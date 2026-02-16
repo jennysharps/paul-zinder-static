@@ -8,7 +8,6 @@ alternate_title: Uno degli Ultimi
 image:
   name: 'assets/images/2011/06/uno_degli_ultimi_2'
   extension: jpg
-vimeo_id: 153887531
 synopsis: >-
   Mauro is a 78-year-old Italian farmer who loves his life. He picks olives,
   grapes, cherries.  He wonders why anybody would want to do anything else.
