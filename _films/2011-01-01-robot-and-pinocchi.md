@@ -8,7 +8,6 @@ alternate_title: Robot e Pinocchi
 image:
   name: 'assets/images/2011/06/CU-Horse-head'
   extension: jpg
-vimeo_id: 153889437
 synopsis: >-
   Italian sculptor Ferdinando Codognotto shapes wood into his personal
   philosophy. We are all robots and pinocchios.
